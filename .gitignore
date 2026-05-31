@@ -1,0 +1,33 @@
+.DS_Store
+.codex-spreadsheet-build/
+node_modules/
+social-renderer/node_modules/
+.env
+.env.*
+*.p8
+.superpowers/
+
+# Archived experiments and vendored reference repositories stay local.
+ARCHIVE/
+
+# Private publishing configuration and operational logs.
+BOURSATI_FINAL_SYSTEM/07_publishing_automation/config/postiz-integrations.json
+BOURSATI_FINAL_SYSTEM/07_publishing_automation/logs/
+
+# Raw app recordings can contain private phone/app context; keep them local.
+BOURSATI_FINAL_SYSTEM/captures/recordings/
+
+postiz/channel-map.json
+postiz/out/
+
+# Large/local media inputs and generated outputs
+source-recordings/*
+higgsfield-runs/*
+exports/*
+captures/*
+
+# Keep folder structure visible if this becomes a git repo later
+!source-recordings/.gitkeep
+!higgsfield-runs/.gitkeep
+!exports/.gitkeep
+!captures/.gitkeep

@@ -1,0 +1,600 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1080, initial-scale=1">
+  <title>bank-18-info-price-delay</title>
+  <style>
+    :root {
+      --blue: #1148FF;
+      --brand-blue: #578AFF;
+      --dark: #0A0B0D;
+      --ink: #090A0F;
+      --paper: #F4F0E7;
+      --white: #F8F8F3;
+      --muted: rgba(248,248,243,0.62);
+      --arabic: "IBM Plex Sans Arabic", "Noto Sans Arabic", "Geeza Pro", Arial, sans-serif;
+      --latin: "Inter", "SF Pro Display", Arial, sans-serif;
+      --mono: "JetBrains Mono", "SF Mono", Consolas, monospace;
+    }
+
+    * { box-sizing: border-box; }
+
+    html,
+    body {
+      width: 1080px;
+      height: 1080px;
+      margin: 0;
+      overflow: hidden;
+      background: var(--dark);
+      font-family: var(--arabic);
+    }
+
+    .art-direction {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      color: var(--white);
+      background:
+        radial-gradient(circle at 74% 14%, rgba(17,72,255,0.43), transparent 28%),
+        linear-gradient(120deg, rgba(255,255,255,0.052) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(255,255,255,0.03) 1px, transparent 1px),
+        var(--dark);
+      background-size: auto, 76px 76px, 76px 76px, auto;
+      isolation: isolate;
+    }
+
+    .art-direction[data-palette="paper"] {
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 18% 22%, rgba(17,72,255,0.18), transparent 28%),
+        linear-gradient(90deg, rgba(10,11,13,0.065) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(10,11,13,0.045) 1px, transparent 1px),
+        var(--paper);
+      background-size: auto, 78px 78px, 78px 78px, auto;
+    }
+
+    .brand {
+      position: absolute;
+      z-index: 20;
+      top: clamp(44px, 5vw, 64px);
+      right: clamp(44px, 5vw, 70px);
+      display: grid;
+      grid-template-columns: max-content max-content;
+      align-items: center;
+      gap: 14px;
+      direction: ltr;
+      font: 950 20px/1 var(--latin);
+      letter-spacing: 0.06em;
+    }
+
+    .brand img {
+      width: 46px;
+      height: 46px;
+      border-radius: 10px;
+    }
+
+    .anchor {
+      position: absolute;
+      z-index: 2;
+      left: -3%;
+      bottom: -8%;
+      width: 52%;
+      height: 74%;
+      opacity: 0.55;
+      color: currentColor;
+      mix-blend-mode: luminosity;
+    }
+
+    .anchor-kuwait-towers {
+      z-index: 7;
+      opacity: 0.78;
+      mix-blend-mode: normal;
+    }
+
+    .anchor svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .anchor-source-seal {
+      width: 54%;
+      height: 54%;
+      left: 4%;
+      top: 15%;
+      bottom: auto;
+      transform: rotate(-10deg);
+    }
+
+    .anchor-sadu-weave {
+      width: 56%;
+      height: 70%;
+      left: 2%;
+      top: 16%;
+      bottom: auto;
+      mix-blend-mode: normal;
+      opacity: 0.78;
+    }
+
+    .anchor-dhow-sail {
+      width: 62%;
+      height: 68%;
+      left: -2%;
+      bottom: -5%;
+      opacity: 0.68;
+    }
+
+    .kinetic {
+      position: absolute;
+      inset: 0;
+      z-index: 4;
+      pointer-events: none;
+    }
+
+    .art-direction:has(.anchor-kuwait-towers) .kinetic {
+      z-index: 3;
+      opacity: 0.84;
+    }
+
+    .kinetic::before,
+    .kinetic::after,
+    .kinetic i {
+      position: absolute;
+      display: block;
+      content: "";
+    }
+
+    .kinetic::before {
+      left: -10%;
+      top: 36%;
+      width: 82%;
+      height: 16%;
+      background: var(--blue);
+      clip-path: polygon(0 34%, 16% 10%, 31% 42%, 52% 5%, 70% 38%, 100% 12%, 100% 70%, 72% 88%, 52% 54%, 30% 92%, 14% 62%, 0 80%);
+      transform: rotate(-8deg);
+      opacity: 0.92;
+    }
+
+    .kinetic::after {
+      left: 10%;
+      bottom: 18%;
+      width: 64%;
+      height: 8px;
+      background: rgba(255,255,255,0.8);
+      transform: rotate(-12deg);
+      box-shadow: 0 58px 0 rgba(87,138,255,0.64);
+    }
+
+    .content {
+      position: absolute;
+      z-index: 12;
+      right: clamp(44px, 6vw, 82px);
+      top: 22%;
+      width: 52%;
+      text-align: right;
+      isolation: isolate;
+    }
+
+    .copy-plate {
+      position: absolute;
+      z-index: -1;
+      inset: -26px -28px -22px -34px;
+      background: linear-gradient(90deg, rgba(244,240,231,0.0), rgba(244,240,231,0.86) 24%, rgba(244,240,231,0.94));
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .art-direction[data-palette="paper"] .copy-plate {
+      opacity: 1;
+    }
+
+    .art-direction[data-palette="dark"] .copy-plate {
+      background: linear-gradient(90deg, rgba(10,11,13,0), rgba(10,11,13,0.7) 24%, rgba(10,11,13,0.82));
+      opacity: 0.62;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(64px, 7vw, 112px);
+      line-height: 0.96;
+      font-weight: 950;
+      letter-spacing: 0;
+      text-wrap: balance;
+    }
+
+    .subline {
+      width: min(100%, 680px);
+      margin: 22px 0 0 auto;
+      font-size: clamp(24px, 2.4vw, 34px);
+      line-height: 1.45;
+      font-weight: 780;
+    }
+
+    .labels {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: 10px;
+      margin-top: 28px;
+      direction: rtl;
+    }
+
+    .labels span {
+      padding: 8px 12px 9px;
+      border: 2px solid currentColor;
+      font-size: clamp(15px, 1.4vw, 20px);
+      line-height: 1;
+      font-weight: 950;
+      background: rgba(255,255,255,0.08);
+    }
+
+    .app-cta {
+      position: absolute;
+      z-index: 22;
+      left: clamp(36px, 5vw, 70px);
+      bottom: clamp(34px, 4vw, 54px);
+      display: grid;
+      grid-template-columns: max-content max-content max-content;
+      align-items: center;
+      justify-content: start;
+      column-gap: 12px;
+      direction: ltr;
+      min-width: min(520px, calc(100% - 72px));
+      height: 58px;
+      padding: 8px 10px;
+      background: rgba(5,7,11,0.76);
+      border: 1px solid rgba(255,255,255,0.16);
+      color: var(--white);
+      font-size: 18px;
+      font-weight: 950;
+      white-space: nowrap;
+    }
+
+    .art-direction[data-cta-zone="right"] .app-cta {
+      left: auto;
+      right: clamp(36px, 5vw, 70px);
+    }
+
+    .art-direction[data-cta-zone="full"] .app-cta {
+      left: 54px;
+      right: 54px;
+      min-width: auto;
+      justify-content: start;
+    }
+
+    .art-direction[data-palette="paper"] .app-cta {
+      background: rgba(244,240,231,0.94);
+      color: var(--ink);
+      border-color: rgba(10,11,13,0.16);
+    }
+
+    .app-cta img {
+      width: 148px;
+      height: auto;
+      display: block;
+    }
+
+    .url {
+      display: inline-flex;
+      align-items: center;
+      height: 36px;
+      padding: 0 11px;
+      direction: ltr;
+      background: var(--blue);
+      color: #fff;
+      font: 900 14px/1 var(--mono);
+    }
+
+    .cta-copy {
+      display: inline-flex;
+      align-items: center;
+      height: 36px;
+      direction: rtl;
+      line-height: 1;
+    }
+
+    .phone-stage {
+      position: absolute;
+      z-index: 11;
+      left: 10%;
+      top: 16%;
+      width: 24%;
+      margin: 0;
+      transform: rotate(-6deg);
+    }
+
+    .art-direction[data-family="phone-hero-banner"] .anchor,
+    .art-direction[data-family="product-proof"] .anchor {
+      left: auto;
+      right: -8%;
+      bottom: -14%;
+      top: auto;
+      width: 42%;
+      height: 68%;
+      opacity: 0.28;
+      transform: none;
+      z-index: 2;
+      mix-blend-mode: normal;
+    }
+
+    .art-direction[data-family="phone-hero-banner"] .anchor-source-seal,
+    .art-direction[data-family="product-proof"] .anchor-source-seal {
+      right: -2%;
+      bottom: 3%;
+      width: 34%;
+      height: 42%;
+    }
+
+    .art-direction[data-family="phone-hero-banner"] .anchor-sadu-weave,
+    .art-direction[data-family="product-proof"] .anchor-sadu-weave {
+      right: -4%;
+      bottom: 2%;
+      width: 38%;
+      height: 54%;
+      opacity: 0.22;
+    }
+
+    .art-direction[data-family="phone-hero-banner"] .anchor-market-arch,
+    .art-direction[data-family="product-proof"] .anchor-market-arch {
+      right: -1%;
+      bottom: -10%;
+      width: 34%;
+      height: 58%;
+    }
+
+    .art-direction[data-family="phone-hero-banner"] .anchor-dhow-sail,
+    .art-direction[data-family="product-proof"] .anchor-dhow-sail {
+      right: -6%;
+      bottom: -12%;
+      width: 38%;
+      height: 56%;
+    }
+
+    .art-direction[data-family="phone-hero-banner"] .kinetic::before,
+    .art-direction[data-family="product-proof"] .kinetic::before {
+      left: 46%;
+      width: 64%;
+      top: 37%;
+    }
+
+    .art-direction[data-family="phone-hero-banner"] .kinetic::after,
+    .art-direction[data-family="product-proof"] .kinetic::after {
+      left: 49%;
+      width: 44%;
+      bottom: 17%;
+    }
+
+    .phone-shell {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 9 / 19.5;
+      overflow: hidden;
+      border: 12px solid #16181d;
+      border-radius: 52px;
+      background: #000;
+      box-shadow:
+        0 0 0 3px rgba(255,255,255,0.62),
+        24px 24px 0 rgba(17,72,255,0.72),
+        0 28px 80px rgba(0,0,0,0.42);
+    }
+
+    .phone-notch {
+      position: absolute;
+      z-index: 2;
+      top: 13px;
+      left: 50%;
+      width: 34%;
+      height: 24px;
+      border-radius: 999px;
+      background: #05070B;
+      transform: translateX(-50%);
+      box-shadow: 0 0 0 1px rgba(255,255,255,0.08);
+    }
+
+    .phone-side-button {
+      position: absolute;
+      z-index: 3;
+      width: 3px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.62);
+    }
+
+    .phone-side-button-left {
+      left: -13px;
+      top: 26%;
+      height: 58px;
+    }
+
+    .phone-side-button-right {
+      right: -13px;
+      top: 31%;
+      height: 84px;
+    }
+
+    .phone-shell img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 2%;
+      display: block;
+      border-radius: 38px;
+    }
+
+    .art-direction[data-family="phone-hero-banner"] .content {
+      width: 46%;
+      top: 19%;
+    }
+
+    .art-direction[data-family="product-proof"] .phone-stage {
+      left: clamp(46px, 8vw, 116px);
+      top: 17%;
+      width: min(28%, 330px);
+      transform: rotate(-4deg);
+    }
+
+    .art-direction[data-family="product-proof"] .content {
+      width: 50%;
+      top: 20%;
+    }
+
+    .art-direction[data-family="phone-hero-banner"] .app-cta {
+      left: auto;
+      right: clamp(44px, 6vw, 82px);
+      bottom: 58px;
+    }
+
+    .art-direction[data-family="featured-grid"] .content,
+    .art-direction[data-family="market-card"] .content {
+      width: 58%;
+      top: 19%;
+    }
+
+    .art-direction[data-family="launch-poster"] .content,
+    .art-direction[data-family="vertical-cover"] .content {
+      width: 78%;
+      right: 8%;
+      top: 16%;
+    }
+
+    .art-direction[data-family="launch-poster"] h1,
+    .art-direction[data-family="vertical-cover"] h1 {
+      font-size: clamp(96px, 15vw, 172px);
+    }
+
+    .art-direction[data-family="announcement"] .content {
+      top: 20%;
+      width: 56%;
+    }
+
+    .art-direction[data-family="daily-tip"] .content,
+    .art-direction[data-family="market-summary-tip"] .content {
+      top: 18%;
+      width: 62%;
+    }
+
+    .art-direction[data-family="daily-tip"] h1,
+    .art-direction[data-family="market-summary-tip"] h1 {
+      font-size: clamp(76px, 8vw, 128px);
+    }
+
+    .art-direction[data-family="daily-tip"] .copy-plate,
+    .art-direction[data-family="market-summary-tip"] .copy-plate {
+      inset: -34px -34px -28px -46px;
+      opacity: 0.96;
+    }
+
+    .art-direction[data-palette="paper"][data-family="daily-tip"] .copy-plate,
+    .art-direction[data-palette="paper"][data-family="market-summary-tip"] .copy-plate {
+      background: linear-gradient(90deg, rgba(244,240,231,0), rgba(244,240,231,0.96) 8%, rgba(244,240,231,0.98));
+    }
+
+    .art-direction[data-palette="dark"][data-family="daily-tip"] .copy-plate,
+    .art-direction[data-palette="dark"][data-family="market-summary-tip"] .copy-plate {
+      background: linear-gradient(90deg, rgba(10,11,13,0), rgba(10,11,13,0.86) 8%, rgba(10,11,13,0.94));
+    }
+
+    .art-direction[data-family="daily-tip"] .anchor {
+      width: 48%;
+      height: 62%;
+      left: -4%;
+      bottom: 4%;
+      opacity: 0.42;
+    }
+
+    .art-direction[data-family="market-summary-tip"] .anchor {
+      width: 50%;
+      height: 68%;
+      left: -5%;
+      bottom: -8%;
+      opacity: 0.54;
+    }
+  </style>
+</head>
+<body>
+  <main class="art-direction" data-family="daily-tip" data-platform="instagram-square" data-palette="paper" data-cta-zone="left">
+    <div class="brand" aria-hidden="true">
+      <span class="brand-word">BOURSATI</span>
+      <img class="brand-mark" alt="" src="file:///Users/home/Documents/Mamoon%20Notes/Projects/boursati-marketing/assets/app-icon-1024.png">
+    </div>
+    <div class="anchor anchor-kuwait-towers" aria-hidden="true"><svg viewBox="0 0 520 720" role="img" aria-label="">
+      <defs>
+        <clipPath id="familyRightLowerSphereClip">
+          <circle cx="338" cy="348" r="86" />
+        </clipPath>
+        <clipPath id="familyRightUpperSphereClip">
+          <circle cx="352" cy="154" r="58" />
+        </clipPath>
+        <clipPath id="familyLeftSphereClip">
+          <circle cx="152" cy="334" r="78" />
+        </clipPath>
+      </defs>
+      <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <g stroke-width="11">
+          <path class="tower-main-right" d="M300 680 C310 556 315 454 332 406 C342 377 345 320 342 280 C338 226 342 184 352 112" />
+          <path class="tower-main-right" d="M386 680 C374 556 369 454 352 406 C342 377 339 320 342 280 C346 226 356 184 364 112" opacity="0.82" />
+          <path class="tower-main-left" d="M112 680 C120 560 126 448 144 382 C154 346 158 304 154 260 C150 206 156 160 166 94" />
+          <path class="tower-main-left" d="M188 680 C180 560 174 448 158 382 C148 346 144 304 148 260 C152 206 160 160 172 94" opacity="0.82" />
+          <path class="tower-needle-center" d="M238 680 L248 230 L255 104" />
+          <path class="tower-needle-center" d="M256 680 L248 230 L242 138" opacity="0.62" />
+        </g>
+        <g stroke-width="7">
+          <path class="tower-spire" d="M352 112 L356 18" />
+          <path class="tower-spire" d="M364 112 L356 18" opacity="0.72" />
+          <path class="tower-spire" d="M166 94 L174 30" />
+          <path class="tower-spire" d="M172 94 L174 30" opacity="0.72" />
+          <path class="tower-spire" d="M248 230 L248 62" opacity="0.74" />
+        </g>
+        <g stroke-width="8">
+          <circle class="tower-right-lower-sphere" cx="338" cy="348" r="86" />
+          <circle class="tower-right-upper-sphere" cx="352" cy="154" r="58" />
+          <circle class="tower-left-sphere" cx="152" cy="334" r="78" />
+        </g>
+        <g class="tower-lattice" stroke-width="3" opacity="0.62">
+          <g clip-path="url(#familyRightLowerSphereClip)">
+            <path d="M240 308 C292 332 344 356 438 400" />
+            <path d="M240 340 C292 364 344 388 438 432" />
+            <path d="M250 388 C306 360 366 330 434 290" />
+            <path d="M250 426 C306 398 366 368 434 328" />
+            <path d="M282 266 C318 324 364 374 426 422" />
+            <path d="M250 424 C306 366 366 312 430 264" />
+          </g>
+          <g clip-path="url(#familyRightUpperSphereClip)">
+            <path d="M284 130 C326 150 370 170 420 196" />
+            <path d="M284 158 C326 178 370 198 420 224" />
+            <path d="M292 198 C330 168 372 138 412 110" />
+            <path d="M306 102 C328 138 362 174 408 204" />
+          </g>
+          <g clip-path="url(#familyLeftSphereClip)">
+            <path d="M62 302 C104 324 152 350 242 386" />
+            <path d="M66 334 C108 356 156 382 240 416" />
+            <path d="M74 390 C118 360 174 326 232 286" />
+            <path d="M82 422 C124 392 178 356 226 320" />
+            <path d="M100 260 C132 318 172 368 222 410" />
+          </g>
+        </g>
+        <g stroke-width="7">
+          <path class="tower-balcony-band" d="M260 330 C305 342 372 344 418 330" />
+          <path class="tower-balcony-band" d="M262 360 C310 372 374 372 416 360" opacity="0.78" />
+          <path class="tower-balcony-band" d="M296 176 C328 184 378 184 406 176" opacity="0.72" />
+        </g>
+        <path d="M52 680 H430" stroke-width="10" opacity="0.78" />
+      </g>
+    </svg></div>
+    <div class="kinetic" aria-hidden="true"><i></i></div>
+    
+    <section class="content">
+      <span class="copy-plate" aria-hidden="true"></span>
+      <h1>تأخير الأسعار يعني ماذا؟</h1>
+      <p class="subline">بعض البيانات قد تظهر بتأخير زمني، لذلك اقرأ الملاحظة قبل المتابعة.</p>
+      <div class="labels"><span>بيانات</span><span>توقيت</span><span>ملاحظة</span><span>متابعة</span></div>
+    </section>
+    <div class="app-cta" dir="ltr">
+      <span class="url">boursati.app</span>
+      <img class="app-store-badge" alt="Download on the App Store" src="file:///Users/home/Documents/Mamoon%20Notes/Projects/boursati-marketing/assets/app-store-badge.svg">
+      <span class="cta-copy" dir="rtl">حمّل بورصتي من App Store</span>
+    </div>
+  </main>
+</body>
+</html>

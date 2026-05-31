@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1080, initial-scale=1">
+  <title>carousel-04-portfolio-clarity 5</title>
+  <style>
+    :root {
+      --blue: #1148FF;
+      --brand-blue: #578AFF;
+      --dark: #0A0B0D;
+      --ink: #090A0F;
+      --paper: #F4F0E7;
+      --white: #F8F8F3;
+      --arabic: "IBM Plex Sans Arabic", "Noto Sans Arabic", "Geeza Pro", Arial, sans-serif;
+      --latin: "Inter", "SF Pro Display", Arial, sans-serif;
+      --mono: "JetBrains Mono", "SF Mono", Consolas, monospace;
+    }
+
+    * { box-sizing: border-box; }
+    html, body {
+      width: 1080px;
+      height: 1080px;
+      margin: 0;
+      overflow: hidden;
+      font-family: var(--arabic);
+      background: var(--dark);
+    }
+
+    .slide {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      isolation: isolate;
+      color: var(--white);
+      background:
+        radial-gradient(circle at 82% 12%, rgba(17,72,255,0.42), transparent 28%),
+        linear-gradient(90deg, rgba(255,255,255,0.045) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(255,255,255,0.035) 1px, transparent 1px),
+        var(--dark);
+      background-size: auto, 76px 76px, 76px 76px, auto;
+    }
+
+    .slide[data-theme="paper"] {
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 18% 18%, rgba(17,72,255,0.16), transparent 28%),
+        linear-gradient(90deg, rgba(10,11,13,0.06) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(10,11,13,0.045) 1px, transparent 1px),
+        var(--paper);
+      background-size: auto, 76px 76px, 76px 76px, auto;
+    }
+
+    .brand {
+      position: absolute;
+      z-index: 20;
+      top: 58px;
+      right: 62px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      direction: ltr;
+      font: 950 20px/1 var(--latin);
+      letter-spacing: 0.06em;
+    }
+    .brand img { width: 44px; height: 44px; border-radius: 10px; }
+
+    .number {
+      position: absolute;
+      top: 64px;
+      left: 68px;
+      direction: ltr;
+      color: var(--brand-blue);
+      font: 900 18px/1 var(--mono);
+      letter-spacing: 0.06em;
+      z-index: 20;
+    }
+
+    .anchor {
+      position: absolute;
+      z-index: 2;
+      left: -8%;
+      bottom: -7%;
+      width: 58%;
+      height: 58%;
+      opacity: 0.42;
+      color: currentColor;
+    }
+    .slide[data-anchor="sadu-weave"] .anchor { opacity: 0.7; }
+    .slide[data-anchor="kuwait-towers"] .anchor { opacity: 0.55; width: 50%; height: 68%; }
+
+    .kinetic {
+      position: absolute;
+      z-index: 4;
+      inset: 0;
+      pointer-events: none;
+    }
+    .kinetic::before {
+      content: "";
+      position: absolute;
+      left: -8%;
+      top: 40%;
+      width: 78%;
+      height: 15%;
+      background: var(--blue);
+      clip-path: polygon(0 34%, 16% 10%, 31% 42%, 52% 5%, 70% 38%, 100% 12%, 100% 70%, 72% 88%, 52% 54%, 30% 92%, 14% 62%, 0 80%);
+      transform: rotate(-7deg);
+      opacity: 0.9;
+    }
+    .kinetic::after {
+      content: "";
+      position: absolute;
+      left: 12%;
+      bottom: 16%;
+      width: 58%;
+      height: 8px;
+      background: rgba(255,255,255,0.82);
+      transform: rotate(-12deg);
+      box-shadow: 0 56px 0 rgba(87,138,255,0.58);
+    }
+
+    .content {
+      position: absolute;
+      z-index: 12;
+      right: 72px;
+      top: 178px;
+      width: 64%;
+      text-align: right;
+      isolation: isolate;
+    }
+    .copy-plate {
+      position: absolute;
+      z-index: -1;
+      inset: -36px -34px -30px -56px;
+      background: linear-gradient(90deg, rgba(10,11,13,0), rgba(10,11,13,0.86) 10%, rgba(10,11,13,0.94));
+    }
+    .slide[data-theme="paper"] .copy-plate {
+      background: linear-gradient(90deg, rgba(244,240,231,0), rgba(244,240,231,0.96) 10%, rgba(244,240,231,0.98));
+    }
+    .kicker {
+      display: block;
+      margin-bottom: 18px;
+      direction: ltr;
+      color: var(--brand-blue);
+      font: 900 16px/1.3 var(--mono);
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 0;
+      font-size: 104px;
+      line-height: 0.96;
+      font-weight: 950;
+      letter-spacing: 0;
+      text-wrap: balance;
+    }
+    p {
+      width: min(100%, 680px);
+      margin: 28px 0 0 auto;
+      font-size: 35px;
+      line-height: 1.45;
+      font-weight: 780;
+    }
+    .labels {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: 10px;
+      margin-top: 32px;
+      direction: rtl;
+    }
+    .labels span {
+      padding: 9px 13px 10px;
+      border: 2px solid currentColor;
+      font-size: 20px;
+      line-height: 1;
+      font-weight: 950;
+      background: rgba(255,255,255,0.08);
+    }
+    .footer {
+      position: absolute;
+      z-index: 22;
+      left: 64px;
+      right: 64px;
+      bottom: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      direction: ltr;
+      font: 900 18px/1 var(--mono);
+      color: currentColor;
+    }
+    .url {
+      padding: 11px 14px;
+      color: #fff;
+      background: var(--blue);
+    }
+    .cta {
+      direction: rtl;
+      font-family: var(--arabic);
+      font-size: 22px;
+    }
+  </style>
+</head>
+<body>
+  <main class="slide" data-theme="dark" data-anchor="sadu-weave">
+    <div class="brand" aria-hidden="true"><span>BOURSATI</span><img alt="" src="file:///Users/home/Documents/Mamoon%20Notes/Projects/boursati-marketing/assets/app-icon-1024.png"></div>
+    <div class="number">05 / 05</div>
+    <div class="anchor anchor-sadu-weave" aria-hidden="true"><svg viewBox="0 0 720 740"><rect width="720" height="740" fill="rgba(255,255,255,0.16)"/><g fill="currentColor"><path d="M30 78 L70 44 L110 78 L70 112 Z" opacity="0.54" /><path d="M126 78 L166 44 L206 78 L166 112 Z" opacity="0.22" /><path d="M222 78 L262 44 L302 78 L262 112 Z" opacity="0.54" /><path d="M318 78 L358 44 L398 78 L358 112 Z" opacity="0.22" /><path d="M414 78 L454 44 L494 78 L454 112 Z" opacity="0.54" /><path d="M510 78 L550 44 L590 78 L550 112 Z" opacity="0.22" /><path d="M606 78 L646 44 L686 78 L646 112 Z" opacity="0.54" /><path d="M30 160 L70 126 L110 160 L70 194 Z" opacity="0.22" /><path d="M126 160 L166 126 L206 160 L166 194 Z" opacity="0.54" /><path d="M222 160 L262 126 L302 160 L262 194 Z" opacity="0.22" /><path d="M318 160 L358 126 L398 160 L358 194 Z" opacity="0.54" /><path d="M414 160 L454 126 L494 160 L454 194 Z" opacity="0.22" /><path d="M510 160 L550 126 L590 160 L550 194 Z" opacity="0.54" /><path d="M606 160 L646 126 L686 160 L646 194 Z" opacity="0.22" /><path d="M30 242 L70 208 L110 242 L70 276 Z" opacity="0.54" /><path d="M126 242 L166 208 L206 242 L166 276 Z" opacity="0.22" /><path d="M222 242 L262 208 L302 242 L262 276 Z" opacity="0.54" /><path d="M318 242 L358 208 L398 242 L358 276 Z" opacity="0.22" /><path d="M414 242 L454 208 L494 242 L454 276 Z" opacity="0.54" /><path d="M510 242 L550 208 L590 242 L550 276 Z" opacity="0.22" /><path d="M606 242 L646 208 L686 242 L646 276 Z" opacity="0.54" /><path d="M30 324 L70 290 L110 324 L70 358 Z" opacity="0.22" /><path d="M126 324 L166 290 L206 324 L166 358 Z" opacity="0.54" /><path d="M222 324 L262 290 L302 324 L262 358 Z" opacity="0.22" /><path d="M318 324 L358 290 L398 324 L358 358 Z" opacity="0.54" /><path d="M414 324 L454 290 L494 324 L454 358 Z" opacity="0.22" /><path d="M510 324 L550 290 L590 324 L550 358 Z" opacity="0.54" /><path d="M606 324 L646 290 L686 324 L646 358 Z" opacity="0.22" /><path d="M30 406 L70 372 L110 406 L70 440 Z" opacity="0.54" /><path d="M126 406 L166 372 L206 406 L166 440 Z" opacity="0.22" /><path d="M222 406 L262 372 L302 406 L262 440 Z" opacity="0.54" /><path d="M318 406 L358 372 L398 406 L358 440 Z" opacity="0.22" /><path d="M414 406 L454 372 L494 406 L454 440 Z" opacity="0.54" /><path d="M510 406 L550 372 L590 406 L550 440 Z" opacity="0.22" /><path d="M606 406 L646 372 L686 406 L646 440 Z" opacity="0.54" /><path d="M30 488 L70 454 L110 488 L70 522 Z" opacity="0.22" /><path d="M126 488 L166 454 L206 488 L166 522 Z" opacity="0.54" /><path d="M222 488 L262 454 L302 488 L262 522 Z" opacity="0.22" /><path d="M318 488 L358 454 L398 488 L358 522 Z" opacity="0.54" /><path d="M414 488 L454 454 L494 488 L454 522 Z" opacity="0.22" /><path d="M510 488 L550 454 L590 488 L550 522 Z" opacity="0.54" /><path d="M606 488 L646 454 L686 488 L646 522 Z" opacity="0.22" /><path d="M30 570 L70 536 L110 570 L70 604 Z" opacity="0.54" /><path d="M126 570 L166 536 L206 570 L166 604 Z" opacity="0.22" /><path d="M222 570 L262 536 L302 570 L262 604 Z" opacity="0.54" /><path d="M318 570 L358 536 L398 570 L358 604 Z" opacity="0.22" /><path d="M414 570 L454 536 L494 570 L454 604 Z" opacity="0.54" /><path d="M510 570 L550 536 L590 570 L550 604 Z" opacity="0.22" /><path d="M606 570 L646 536 L686 570 L646 604 Z" opacity="0.54" /><path d="M30 652 L70 618 L110 652 L70 686 Z" opacity="0.22" /><path d="M126 652 L166 618 L206 652 L166 686 Z" opacity="0.54" /><path d="M222 652 L262 618 L302 652 L262 686 Z" opacity="0.22" /><path d="M318 652 L358 618 L398 652 L358 686 Z" opacity="0.54" /><path d="M414 652 L454 618 L494 652 L454 686 Z" opacity="0.22" /><path d="M510 652 L550 618 L590 652 L550 686 Z" opacity="0.54" /><path d="M606 652 L646 618 L686 652 L646 686 Z" opacity="0.22" /></g><g stroke="#1148FF" stroke-width="14" opacity="0.78"><path d="M0 170 H720"/><path d="M0 492 H720"/></g></svg></div>
+    <div class="kinetic" aria-hidden="true"></div>
+    <section class="content">
+      <span class="copy-plate" aria-hidden="true"></span>
+      <span class="kicker">بورصتي</span>
+      <h1>محفظتك ضمن تجربة أوضح</h1>
+      <p>تابع المكونات والتوزيعات المتوقعة مع الأخبار والإفصاحات.</p>
+      <div class="labels"><span>محفظة</span><span>أخبار</span><span>إفصاحات</span></div>
+    </section>
+    <footer class="footer">
+      <span class="url">boursati.app</span>
+      <span class="cta">حمّل بورصتي من App Store</span>
+    </footer>
+  </main>
+</body>
+</html>

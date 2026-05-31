@@ -1,0 +1,144 @@
+[
+  {
+    "id": "promo-01-launch-hero",
+    "title": "Launch Hero",
+    "target": "General launch audience",
+    "message": "بورصة الكويت في جيبك",
+    "durationGoal": "18s",
+    "direction": "Kinetic Kuwait Editorial hero with cinematic motion and product proof.",
+    "segments": [
+      { "type": "video", "src": "captures/source-clips/boursati-cinematic-18s-1080x1920.mp4", "start": 0, "duration": 4 },
+      { "type": "image", "src": "05_source_system/exports/vertical-01-launch.png", "duration": 3 },
+      { "type": "image", "src": "05_source_system/exports/proof-01-home-summary.png", "duration": 4 },
+      { "type": "image", "src": "05_source_system/exports/feed-01-launch-portrait.png", "duration": 5 },
+      { "type": "image", "src": "05_source_system/exports/grid-09-download.png", "duration": 2 }
+    ]
+  },
+  {
+    "id": "promo-02-disclosure-alert",
+    "title": "Disclosure Alert",
+    "target": "Users who care about official disclosures",
+    "message": "من التنبيه إلى الإفصاح",
+    "durationGoal": "14s",
+    "direction": "Fast alert-to-source proof using safe notification recordings.",
+    "segments": [
+      { "type": "image", "src": "05_source_system/exports/bank-08-tip-notification-path.png", "duration": 3 },
+      { "type": "video", "src": "captures/recordings/intake-2026-05-23/notification-disclosure-alftaq-safe.mp4", "start": 0.8, "duration": 5 },
+      { "type": "video", "src": "captures/recordings/intake-2026-05-23/notification-disclosure-rasiyat-safe.mp4", "start": 0.6, "duration": 4 },
+      { "type": "image", "src": "05_source_system/exports/vertical-02-disclosure.png", "duration": 3 }
+    ]
+  },
+  {
+    "id": "promo-03-market-morning",
+    "title": "Market Morning",
+    "target": "Daily market followers",
+    "message": "ابدأ يومك من ملخص السوق",
+    "durationGoal": "15s",
+    "direction": "Morning routine, market-summary led, no heavy app proof.",
+    "segments": [
+      { "type": "image", "src": "05_source_system/exports/bank-03-market-morning.png", "duration": 4 },
+      { "type": "image", "src": "05_source_system/exports/proof-01-home-summary.png", "duration": 5 },
+      { "type": "image", "src": "05_source_system/exports/proof-01-home-summary.png", "duration": 4 },
+      { "type": "image", "src": "05_source_system/exports/bank-20-market-quiet.png", "duration": 3 }
+    ]
+  },
+  {
+    "id": "promo-04-news-vs-disclosure",
+    "title": "News vs Disclosure",
+    "target": "Educational audience",
+    "message": "الخبر عنوان، الإفصاح مصدر",
+    "durationGoal": "15s",
+    "direction": "Carousel-style educational motion using the approved explainer sequence.",
+    "segments": [
+      { "type": "image", "src": "05_source_system/exports/carousels/carousel-01-news-vs-disclosure-s01.png", "duration": 3 },
+      { "type": "image", "src": "05_source_system/exports/carousels/carousel-01-news-vs-disclosure-s02.png", "duration": 3 },
+      { "type": "image", "src": "05_source_system/exports/carousels/carousel-01-news-vs-disclosure-s03.png", "duration": 3 },
+      { "type": "image", "src": "05_source_system/exports/carousels/carousel-01-news-vs-disclosure-s04.png", "duration": 3 },
+      { "type": "image", "src": "05_source_system/exports/carousels/carousel-01-news-vs-disclosure-s05.png", "duration": 3 }
+    ]
+  },
+  {
+    "id": "promo-05-company-context",
+    "title": "Company Context",
+    "target": "Users researching companies",
+    "message": "افتح الشركة واقرأ المسار كامل",
+    "durationGoal": "16s",
+    "direction": "Company reading map with light product proof.",
+    "segments": [
+      { "type": "image", "src": "05_source_system/exports/carousels/carousel-03-company-reading-map-s01.png", "duration": 3 },
+      { "type": "image", "src": "05_source_system/exports/feed-04-company-depth.png", "duration": 5 },
+      { "type": "image", "src": "05_source_system/exports/feed-04-company-depth.png", "duration": 4 },
+      { "type": "image", "src": "05_source_system/exports/carousels/carousel-03-company-reading-map-s05.png", "duration": 3 }
+    ]
+  },
+  {
+    "id": "promo-06-portfolio-clarity",
+    "title": "Portfolio Clarity",
+    "target": "Portfolio users",
+    "message": "محفظتك أوضح",
+    "durationGoal": "16s",
+    "direction": "Portfolio organization with dark editorial texture.",
+    "segments": [
+      { "type": "image", "src": "05_source_system/exports/carousels/carousel-04-portfolio-clarity-s01.png", "duration": 3 },
+      { "type": "image", "src": "05_source_system/exports/proof-03-portfolio.png", "duration": 4 },
+      { "type": "image", "src": "05_source_system/exports/carousels/carousel-04-portfolio-clarity-s03.png", "duration": 5 },
+      { "type": "image", "src": "05_source_system/exports/vertical-04-portfolio.png", "duration": 4 }
+    ]
+  },
+  {
+    "id": "promo-07-watchlist-habit",
+    "title": "Watchlist Habit",
+    "target": "Regular company followers",
+    "message": "خل الشركات المهمة قريبة",
+    "durationGoal": "13s",
+    "direction": "Habit-led short using watchlist and alerts messaging.",
+    "segments": [
+      { "type": "image", "src": "05_source_system/exports/feed-06-watchlist.png", "duration": 4 },
+      { "type": "image", "src": "05_source_system/exports/bank-19-tip-favorites.png", "duration": 5 },
+      { "type": "image", "src": "05_source_system/exports/bank-06-tip-watchlist.png", "duration": 4 }
+    ]
+  },
+  {
+    "id": "promo-08-kuwait-editorial-brand",
+    "title": "Kuwait Editorial Brand Film",
+    "target": "Brand awareness",
+    "message": "محلي، واضح، حديث",
+    "durationGoal": "15s",
+    "direction": "No app screenshots. Pure editorial brand energy with Kuwait visual language.",
+    "segments": [
+      { "type": "video", "src": "captures/source-clips/boursati-cinematic-18s-1080x1920.mp4", "start": 2, "duration": 4 },
+      { "type": "image", "src": "05_source_system/exports/grid-02-market-summary.png", "duration": 3 },
+      { "type": "image", "src": "05_source_system/exports/bank-13-tip-sector.png", "duration": 3 },
+      { "type": "image", "src": "05_source_system/exports/grid-05-boursati-center.png", "duration": 3 },
+      { "type": "image", "src": "05_source_system/exports/grid-09-download.png", "duration": 2 }
+    ]
+  },
+  {
+    "id": "promo-09-app-proof-fast-cut",
+    "title": "App Proof Fast Cut",
+    "target": "App Store conversion audience",
+    "message": "شاهد التطبيق الحقيقي",
+    "durationGoal": "18s",
+    "direction": "Mostly real app recording, minimal poster interruption.",
+    "segments": [
+      { "type": "image", "src": "05_source_system/exports/x-01-launch.png", "duration": 3 },
+      { "type": "image", "src": "05_source_system/exports/proof-01-home-summary.png", "duration": 4 },
+      { "type": "image", "src": "05_source_system/exports/proof-02-disclosures.png", "duration": 4 },
+      { "type": "image", "src": "05_source_system/exports/proof-03-portfolio.png", "duration": 4 },
+      { "type": "image", "src": "05_source_system/exports/proof-04-news.png", "duration": 3 }
+    ]
+  },
+  {
+    "id": "promo-10-bumper-pack",
+    "title": "6-Second Bumper",
+    "target": "Ads and story reminders",
+    "message": "حمّل بورصتي من App Store",
+    "durationGoal": "6s",
+    "direction": "Fast CTA bumper using logo, blue motion, and download tile.",
+    "segments": [
+      { "type": "image", "src": "05_source_system/exports/grid-05-boursati-center.png", "duration": 2 },
+      { "type": "image", "src": "05_source_system/exports/vertical-01-launch.png", "duration": 2 },
+      { "type": "image", "src": "05_source_system/exports/grid-09-download.png", "duration": 2 }
+    ]
+  }
+]

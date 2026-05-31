@@ -1,0 +1,12 @@
+{
+  "instagram": {
+    "enabled": true,
+    "integrationId": "replace_with_postiz_instagram_integration_id",
+    "settingsType": "instagram"
+  },
+  "x": {
+    "enabled": true,
+    "integrationId": "replace_with_postiz_x_integration_id",
+    "settingsType": "x"
+  }
+}

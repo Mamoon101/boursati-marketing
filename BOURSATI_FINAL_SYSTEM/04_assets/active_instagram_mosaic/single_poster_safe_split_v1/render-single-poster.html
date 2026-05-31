@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=3240, initial-scale=1">
+  <title>Boursati Safe 3x3 Single Poster</title>
+  <style>
+    :root {
+      --blue: #1148ff;
+      --blue2: #6f98ff;
+      --dark: #080a0f;
+      --ink: #f8f8f3;
+      --muted: rgba(248,248,243,0.72);
+      --arabic: "IBM Plex Sans Arabic", "Noto Sans Arabic", "Geeza Pro", Arial, sans-serif;
+      --latin: "Inter", "SF Pro Display", Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    html,
+    body {
+      width: 3240px;
+      height: 3240px;
+      margin: 0;
+      overflow: hidden;
+      background: var(--dark);
+      font-family: var(--arabic);
+    }
+
+    .poster {
+      position: relative;
+      width: 3240px;
+      height: 3240px;
+      overflow: hidden;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 82% 6%, rgba(17,72,255,0.58), transparent 22%),
+        radial-gradient(circle at 18% 62%, rgba(17,72,255,0.18), transparent 28%),
+        linear-gradient(120deg, rgba(255,255,255,0.045) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(255,255,255,0.028) 1px, transparent 1px),
+        var(--dark);
+      background-size: auto, auto, 120px 120px, 120px 120px, auto;
+    }
+
+    .brand {
+      position: absolute;
+      top: 145px;
+      right: 145px;
+      z-index: 30;
+      display: flex;
+      align-items: center;
+      gap: 34px;
+      direction: ltr;
+      font: 950 82px/1 var(--latin);
+      letter-spacing: 0.035em;
+    }
+
+    .brand img {
+      width: 146px;
+      height: 146px;
+      border-radius: 32px;
+    }
+
+    .tower {
+      position: absolute;
+      z-index: 8;
+      left: -70px;
+      top: 365px;
+      width: 1450px;
+      height: 2500px;
+      color: rgba(248,248,243,0.66);
+    }
+
+    .tower svg { width: 100%; height: 100%; }
+
+    .ribbon {
+      position: absolute;
+      z-index: 5;
+      left: -340px;
+      top: 1140px;
+      width: 2900px;
+      height: 390px;
+      background: var(--blue);
+      clip-path: polygon(0 30%, 17% 8%, 33% 44%, 54% 5%, 72% 38%, 100% 12%, 100% 68%, 73% 88%, 54% 55%, 33% 92%, 15% 62%, 0 78%);
+      transform: rotate(-6deg);
+      opacity: 0.94;
+    }
+
+    .ribbon2 {
+      position: absolute;
+      z-index: 4;
+      right: -410px;
+      bottom: 530px;
+      width: 1700px;
+      height: 190px;
+      background: var(--blue);
+      transform: rotate(-13deg);
+      opacity: 0.88;
+    }
+
+    .linework {
+      position: absolute;
+      z-index: 4;
+      left: 240px;
+      bottom: 315px;
+      width: 1760px;
+      height: 26px;
+      transform: rotate(-12deg);
+      background: rgba(248,248,243,0.78);
+      box-shadow: 0 190px 0 rgba(111,152,255,0.72);
+    }
+
+    .safe-panel {
+      position: absolute;
+      z-index: 20;
+      right: 150px;
+      text-align: right;
+    }
+
+    .headline {
+      top: 330px;
+      width: 850px;
+    }
+
+    .headline h1 {
+      margin: 0;
+      font-size: 175px;
+      line-height: 0.94;
+      font-weight: 950;
+      letter-spacing: 0;
+    }
+
+    .headline p {
+      margin: 58px 0 0;
+      width: 800px;
+      font-size: 52px;
+      line-height: 1.35;
+      font-weight: 820;
+    }
+
+    .feature-panel {
+      top: 1315px;
+      width: 850px;
+    }
+
+    .feature-panel h2 {
+      margin: 0;
+      font-size: 104px;
+      line-height: 1.02;
+      font-weight: 950;
+    }
+
+    .feature-panel p {
+      margin: 44px 0 0;
+      width: 780px;
+      font-size: 48px;
+      line-height: 1.36;
+      font-weight: 820;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: 24px;
+      margin-top: 64px;
+      direction: rtl;
+    }
+
+    .tags span {
+      padding: 23px 34px 29px;
+      border: 6px solid currentColor;
+      font-size: 43px;
+      line-height: 1;
+      font-weight: 950;
+      background: rgba(255,255,255,0.06);
+    }
+
+    .cta {
+      position: absolute;
+      z-index: 25;
+      right: 150px;
+      bottom: 160px;
+      width: 860px;
+      min-height: 250px;
+      display: grid;
+      grid-template-columns: max-content max-content;
+      gap: 26px 30px;
+      align-items: center;
+      justify-content: start;
+      direction: ltr;
+      padding: 32px 34px;
+      border: 2px solid rgba(248,248,243,0.24);
+      background: rgba(5,7,11,0.78);
+      font-weight: 950;
+    }
+
+    .url {
+      display: inline-flex;
+      align-items: center;
+      height: 104px;
+      padding: 0 38px;
+      background: var(--blue);
+      color: #fff;
+      font: 900 44px/1 "JetBrains Mono", "SF Mono", monospace;
+    }
+
+    .cta img {
+      width: 405px;
+      height: auto;
+    }
+
+    .cta-copy {
+      grid-column: 1 / -1;
+      direction: rtl;
+      font-size: 54px;
+      line-height: 1;
+      white-space: nowrap;
+      text-align: right;
+    }
+
+    .micro {
+      position: absolute;
+      z-index: 11;
+      left: 150px;
+      top: 165px;
+      width: 620px;
+      color: var(--muted);
+      direction: ltr;
+      font: 850 34px/1.35 "JetBrains Mono", "SF Mono", monospace;
+      text-transform: uppercase;
+    }
+
+    .micro::before {
+      content: "";
+      display: block;
+      width: 150px;
+      height: 14px;
+      margin-bottom: 46px;
+      background: var(--blue);
+    }
+  </style>
+</head>
+<body>
+  <main class="poster">
+    <div class="brand">
+      <span>BOURSATI</span>
+      <img src="file:///Users/home/Documents/Mamoon%20Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/assets/app-icon-1024.png" alt="">
+    </div>
+    <div class="micro">REAL-TIME MARKET FOLLOW-UP FOR KUWAIT.</div>
+    <div class="tower" aria-hidden="true"><svg viewBox="0 0 520 720">
+        <defs>
+          <clipPath id="rightLower"><circle cx="338" cy="348" r="86" /></clipPath>
+          <clipPath id="rightUpper"><circle cx="352" cy="154" r="58" /></clipPath>
+          <clipPath id="leftSphere"><circle cx="152" cy="334" r="78" /></clipPath>
+        </defs>
+        <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+          <g stroke-width="11">
+            <path d="M300 680 C310 556 315 454 332 406 C342 377 345 320 342 280 C338 226 342 184 352 112" />
+            <path d="M386 680 C374 556 369 454 352 406 C342 377 339 320 342 280 C346 226 356 184 364 112" opacity="0.82" />
+            <path d="M112 680 C120 560 126 448 144 382 C154 346 158 304 154 260 C150 206 156 160 166 94" />
+            <path d="M188 680 C180 560 174 448 158 382 C148 346 144 304 148 260 C152 206 160 160 172 94" opacity="0.82" />
+            <path d="M238 680 L248 230 L255 104" />
+            <path d="M256 680 L248 230 L242 138" opacity="0.62" />
+          </g>
+          <g stroke-width="7">
+            <path d="M352 112 L356 18" />
+            <path d="M364 112 L356 18" opacity="0.72" />
+            <path d="M166 94 L174 30" />
+            <path d="M172 94 L174 30" opacity="0.72" />
+            <path d="M248 230 L248 62" opacity="0.74" />
+          </g>
+          <g stroke-width="8">
+            <circle cx="338" cy="348" r="86" />
+            <circle cx="352" cy="154" r="58" />
+            <circle cx="152" cy="334" r="78" />
+          </g>
+          <g stroke-width="3" opacity="0.62">
+            <g clip-path="url(#rightLower)">
+              <path d="M240 308 C292 332 344 356 438 400" />
+              <path d="M240 340 C292 364 344 388 438 432" />
+              <path d="M250 388 C306 360 366 330 434 290" />
+              <path d="M250 426 C306 398 366 368 434 328" />
+              <path d="M282 266 C318 324 364 374 426 422" />
+              <path d="M250 424 C306 366 366 312 430 264" />
+            </g>
+            <g clip-path="url(#rightUpper)">
+              <path d="M284 130 C326 150 370 170 420 196" />
+              <path d="M284 158 C326 178 370 198 420 224" />
+              <path d="M292 198 C330 168 372 138 412 110" />
+              <path d="M306 102 C328 138 362 174 408 204" />
+            </g>
+            <g clip-path="url(#leftSphere)">
+              <path d="M62 302 C104 324 152 350 242 386" />
+              <path d="M66 334 C108 356 156 382 240 416" />
+              <path d="M74 390 C118 360 174 326 232 286" />
+              <path d="M82 422 C124 392 178 356 226 320" />
+              <path d="M100 260 C132 318 172 368 222 410" />
+            </g>
+          </g>
+          <g stroke-width="7">
+            <path d="M260 330 C305 342 372 344 418 330" />
+            <path d="M262 360 C310 372 374 372 416 360" opacity="0.78" />
+            <path d="M296 176 C328 184 378 184 406 176" opacity="0.72" />
+          </g>
+          <path d="M52 680 H430" stroke-width="10" opacity="0.78" />
+        </g>
+      </svg></div>
+    <div class="ribbon"></div>
+    <div class="ribbon2"></div>
+    <div class="linework"></div>
+
+    <section class="safe-panel headline">
+      <h1>بورصة الكويت<br>في جيبك</h1>
+      <p>تطبيق عربي يجمع أهم مسارات المتابعة في مكان واحد.</p>
+    </section>
+
+    <section class="safe-panel feature-panel">
+      <h2>تابع السوق<br>بدون لويه</h2>
+      <p>أسعار، أخبار، إفصاحات، شركات، ومحفظتك ضمن تجربة واحدة.</p>
+      <div class="tags">
+        <span>أسعار</span>
+        <span>أخبار</span>
+        <span>إفصاحات</span>
+      </div>
+    </section>
+
+    <div class="cta">
+      <span class="url">boursati.app</span>
+      <img src="file:///Users/home/Documents/Mamoon%20Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/assets/app-store-badge.svg" alt="">
+      <span class="cta-copy">حمّل بورصتي من App Store</span>
+    </div>
+  </main>
+</body>
+</html>

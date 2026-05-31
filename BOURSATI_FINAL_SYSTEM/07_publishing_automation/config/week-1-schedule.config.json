@@ -1,0 +1,17 @@
+{
+  "timezone": "Asia/Kuwait",
+  "launchDate": "2026-05-26",
+  "mode": "schedule",
+  "platforms": {
+    "instagram": true,
+    "x": true
+  },
+  "dailySlots": {
+    "gridLaunch": "14:00",
+    "feed": "19:00",
+    "story": "13:00",
+    "x": "11:00"
+  },
+  "gridMinuteStep": 2,
+  "notes": "Week 1 starts at 2:00 PM Kuwait time on 2026-05-26. Grid posts are staggered by gridMinuteStep so the final profile grid order is preserved."
+}

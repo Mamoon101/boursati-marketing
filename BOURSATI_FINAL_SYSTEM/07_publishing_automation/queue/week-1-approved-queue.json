@@ -1,0 +1,279 @@
+{
+  "generatedAt": "2026-05-26T10:05:52.648Z",
+  "queue": [
+    {
+      "id": "week1-01",
+      "status": "approved",
+      "mode": "schedule",
+      "timezone": "Asia/Kuwait",
+      "scheduledAt": "2026-05-26T11:00:00.000Z",
+      "platform": "instagram",
+      "title": "Grid 09 - Download",
+      "caption": "جرّب بورصتي.\n\nمتاح الآن على App Store لمتابعة بورصة الكويت.\n\nحمّل بورصتي من App Store.",
+      "mediaPaths": [
+        "/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/04_assets/ready_to_post_by_week/launch_batch_01_week_1/instagram-grid/grid-09-download.png"
+      ],
+      "sourceAsset": "instagram-grid/grid-09-download.png",
+      "notes": ""
+    },
+    {
+      "id": "week1-02",
+      "status": "approved",
+      "mode": "schedule",
+      "timezone": "Asia/Kuwait",
+      "scheduledAt": "2026-05-26T11:02:00.000Z",
+      "platform": "instagram",
+      "title": "Grid 08 - All Paths",
+      "caption": "كل مسار له مكان.\n\nالشركات، الإفصاحات، الأخبار، والمحفظة ضمن نظام واضح للمتابعة.\n\nحمّل بورصتي من App Store.",
+      "mediaPaths": [
+        "/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/04_assets/ready_to_post_by_week/launch_batch_01_week_1/instagram-grid/grid-08-all-paths.png"
+      ],
+      "sourceAsset": "instagram-grid/grid-08-all-paths.png",
+      "notes": ""
+    },
+    {
+      "id": "week1-03",
+      "status": "approved",
+      "mode": "schedule",
+      "timezone": "Asia/Kuwait",
+      "scheduledAt": "2026-05-26T11:04:00.000Z",
+      "platform": "instagram",
+      "title": "Grid 07 - Alerts",
+      "caption": "التنبيه يفتح المسار.\n\nمن الإشعار إلى الإفصاح، ثم إلى تفاصيل الشركة.\n\nحمّل بورصتي من App Store.",
+      "mediaPaths": [
+        "/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/04_assets/ready_to_post_by_week/launch_batch_01_week_1/instagram-grid/grid-07-alerts.png"
+      ],
+      "sourceAsset": "instagram-grid/grid-07-alerts.png",
+      "notes": ""
+    },
+    {
+      "id": "week1-04",
+      "status": "approved",
+      "mode": "schedule",
+      "timezone": "Asia/Kuwait",
+      "scheduledAt": "2026-05-26T11:06:00.000Z",
+      "platform": "instagram",
+      "title": "Grid 06 - Portfolio",
+      "caption": "محفظتك كدفتر واضح.\n\nمكوناتك وتوزيعاتك المتوقعة مرتبة للمراجعة السريعة.\n\nحمّل بورصتي من App Store.",
+      "mediaPaths": [
+        "/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/04_assets/ready_to_post_by_week/launch_batch_01_week_1/instagram-grid/grid-06-portfolio-clear.png"
+      ],
+      "sourceAsset": "instagram-grid/grid-06-portfolio-clear.png",
+      "notes": ""
+    },
+    {
+      "id": "week1-05",
+      "status": "approved",
+      "mode": "schedule",
+      "timezone": "Asia/Kuwait",
+      "scheduledAt": "2026-05-26T11:08:00.000Z",
+      "platform": "instagram",
+      "title": "Grid 05 - Boursati",
+      "caption": "بورصتي.\n\nطريقة أوضح لمتابعة بورصة الكويت من هاتفك.\n\nحمّل بورصتي من App Store.",
+      "mediaPaths": [
+        "/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/04_assets/ready_to_post_by_week/launch_batch_01_week_1/instagram-grid/grid-05-boursati-center.png"
+      ],
+      "sourceAsset": "instagram-grid/grid-05-boursati-center.png",
+      "notes": ""
+    },
+    {
+      "id": "week1-06",
+      "status": "approved",
+      "mode": "schedule",
+      "timezone": "Asia/Kuwait",
+      "scheduledAt": "2026-05-26T11:10:00.000Z",
+      "platform": "instagram",
+      "title": "Grid 04 - Company Context",
+      "caption": "الخبر يحتاج شركة.\n\nاقرأ الخبر، ثم ارجع إلى الشركة التي يتحرك حولها السياق.\n\nحمّل بورصتي من App Store.",
+      "mediaPaths": [
+        "/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/04_assets/ready_to_post_by_week/launch_batch_01_week_1/instagram-grid/grid-04-company-context.png"
+      ],
+      "sourceAsset": "instagram-grid/grid-04-company-context.png",
+      "notes": ""
+    },
+    {
+      "id": "week1-07",
+      "status": "approved",
+      "mode": "schedule",
+      "timezone": "Asia/Kuwait",
+      "scheduledAt": "2026-05-26T11:12:00.000Z",
+      "platform": "instagram",
+      "title": "Grid 03 - Disclosure Source",
+      "caption": "المصدر أولاً.\n\nالإفصاح الرسمي هو بداية القراءة، لا نهايتها.\n\nحمّل بورصتي من App Store.",
+      "mediaPaths": [
+        "/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/04_assets/ready_to_post_by_week/launch_batch_01_week_1/instagram-grid/grid-03-disclosure-source.png"
+      ],
+      "sourceAsset": "instagram-grid/grid-03-disclosure-source.png",
+      "notes": ""
+    },
+    {
+      "id": "week1-08",
+      "status": "approved",
+      "mode": "schedule",
+      "timezone": "Asia/Kuwait",
+      "scheduledAt": "2026-05-26T11:14:00.000Z",
+      "platform": "instagram",
+      "title": "Grid 02 - Market Summary",
+      "caption": "ابدأ من الصورة الأكبر.\n\nملخص السوق يساعدك تبدأ القراءة قبل الدخول في تفاصيل الشركات.\n\nحمّل بورصتي من App Store.",
+      "mediaPaths": [
+        "/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/04_assets/ready_to_post_by_week/launch_batch_01_week_1/instagram-grid/grid-02-market-summary.png"
+      ],
+      "sourceAsset": "instagram-grid/grid-02-market-summary.png",
+      "notes": ""
+    },
+    {
+      "id": "week1-09",
+      "status": "approved",
+      "mode": "schedule",
+      "timezone": "Asia/Kuwait",
+      "scheduledAt": "2026-05-26T11:16:00.000Z",
+      "platform": "instagram",
+      "title": "Grid 01 - Launch Pocket",
+      "caption": "بورصة الكويت في جيبك.\n\nبورصتي يجمع أهم مسارات المتابعة في تطبيق عربي واحد: الأسعار، الأخبار، الإفصاحات، الشركات، والمحفظة.\n\nحمّل بورصتي من App Store.",
+      "mediaPaths": [
+        "/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/04_assets/ready_to_post_by_week/launch_batch_01_week_1/instagram-grid/grid-01-launch-pocket.png"
+      ],
+      "sourceAsset": "instagram-grid/grid-01-launch-pocket.png",
+      "notes": ""
+    },
+    {
+      "id": "week1-10",
+      "status": "approved",
+      "mode": "schedule",
+      "timezone": "Asia/Kuwait",
+      "scheduledAt": "2026-05-27T16:00:00.000Z",
+      "platform": "instagram",
+      "title": "Main Launch Feed",
+      "caption": "بورصة الكويت في جيبك.\n\nأسعار، أخبار، إفصاحات، ومحفظتك في تطبيق عربي واحد.\n\nحمّل بورصتي من App Store.",
+      "mediaPaths": [
+        "/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/04_assets/ready_to_post_by_week/launch_batch_01_week_1/instagram-feed/feed-01-launch-portrait.png"
+      ],
+      "sourceAsset": "instagram-feed/feed-01-launch-portrait.png",
+      "notes": ""
+    },
+    {
+      "id": "week1-11",
+      "status": "approved",
+      "mode": "schedule",
+      "timezone": "Asia/Kuwait",
+      "scheduledAt": "2026-05-28T16:00:00.000Z",
+      "platform": "instagram",
+      "title": "Market Clarity",
+      "caption": "تابع السوق بدون لويه.\n\nابدأ من ملخص واضح، ثم ادخل في التفاصيل التي تهمك.\n\nحمّل بورصتي من App Store.",
+      "mediaPaths": [
+        "/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/04_assets/ready_to_post_by_week/launch_batch_01_week_1/instagram-feed/feed-02-market-clarity.png"
+      ],
+      "sourceAsset": "instagram-feed/feed-02-market-clarity.png",
+      "notes": ""
+    },
+    {
+      "id": "week1-12",
+      "status": "approved",
+      "mode": "schedule",
+      "timezone": "Asia/Kuwait",
+      "scheduledAt": "2026-05-28T10:00:00.000Z",
+      "platform": "instagram",
+      "title": "Launch Story",
+      "caption": "بورصتي.\n\nطريقة أوضح لمتابعة بورصة الكويت من هاتفك.\n\nحمّل بورصتي من App Store.",
+      "mediaPaths": [
+        "/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/04_assets/ready_to_post_by_week/launch_batch_01_week_1/stories-reels/vertical-01-launch.png"
+      ],
+      "sourceAsset": "stories-reels/vertical-01-launch.png",
+      "notes": ""
+    },
+    {
+      "id": "week1-13",
+      "status": "approved",
+      "mode": "schedule",
+      "timezone": "Asia/Kuwait",
+      "scheduledAt": "2026-05-29T16:00:00.000Z",
+      "platform": "instagram",
+      "title": "Disclosure Awareness",
+      "caption": "الإفصاح قبل الكلام.\n\nابدأ من المصدر الرسمي، ثم اقرأ السياق داخل بورصتي.\n\nحمّل بورصتي من App Store.",
+      "mediaPaths": [
+        "/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/04_assets/ready_to_post_by_week/launch_batch_01_week_1/instagram-feed/feed-03-disclosures.png"
+      ],
+      "sourceAsset": "instagram-feed/feed-03-disclosures.png",
+      "notes": ""
+    },
+    {
+      "id": "week1-14",
+      "status": "approved",
+      "mode": "schedule",
+      "timezone": "Asia/Kuwait",
+      "scheduledAt": "2026-05-29T10:00:00.000Z",
+      "platform": "instagram",
+      "title": "Disclosure Story",
+      "caption": "وصل إفصاح؟\n\nافتح التنبيه، اقرأ المصدر، ثم راجع تفاصيل الشركة.\n\nحمّل بورصتي من App Store.",
+      "mediaPaths": [
+        "/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/04_assets/ready_to_post_by_week/launch_batch_01_week_1/stories-reels/vertical-02-disclosure.png"
+      ],
+      "sourceAsset": "stories-reels/vertical-02-disclosure.png",
+      "notes": ""
+    },
+    {
+      "id": "week1-15",
+      "status": "approved",
+      "mode": "schedule",
+      "timezone": "Asia/Kuwait",
+      "scheduledAt": "2026-05-30T16:00:00.000Z",
+      "platform": "instagram",
+      "title": "Product Proof",
+      "caption": "ملخص السوق أمامك.\n\nلقطة حقيقية من بورصتي لبداية أوضح قبل التفاصيل.\n\nحمّل بورصتي من App Store.",
+      "mediaPaths": [
+        "/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/04_assets/ready_to_post_by_week/launch_batch_01_week_1/instagram-feed/proof-01-home-summary.png"
+      ],
+      "sourceAsset": "instagram-feed/proof-01-home-summary.png",
+      "notes": ""
+    },
+    {
+      "id": "week1-16",
+      "status": "approved",
+      "mode": "schedule",
+      "timezone": "Asia/Kuwait",
+      "scheduledAt": "2026-05-31T16:00:00.000Z",
+      "platform": "instagram",
+      "title": "Carousel - News vs Disclosure",
+      "caption": "خبر أم إفصاح؟\n\nالخبر يعطيك العنوان. الإفصاح هو المصدر الرسمي. ابدأ بالمصدر، ثم اقرأ السياق.\n\nحمّل بورصتي من App Store.",
+      "mediaPaths": [
+        "/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/04_assets/ready_to_post_by_week/launch_batch_01_week_1/carousels/carousel-01-news-vs-disclosure/carousel-01-news-vs-disclosure-s01.png",
+        "/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/04_assets/ready_to_post_by_week/launch_batch_01_week_1/carousels/carousel-01-news-vs-disclosure/carousel-01-news-vs-disclosure-s02.png",
+        "/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/04_assets/ready_to_post_by_week/launch_batch_01_week_1/carousels/carousel-01-news-vs-disclosure/carousel-01-news-vs-disclosure-s03.png",
+        "/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/04_assets/ready_to_post_by_week/launch_batch_01_week_1/carousels/carousel-01-news-vs-disclosure/carousel-01-news-vs-disclosure-s04.png",
+        "/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/04_assets/ready_to_post_by_week/launch_batch_01_week_1/carousels/carousel-01-news-vs-disclosure/carousel-01-news-vs-disclosure-s05.png"
+      ],
+      "sourceAsset": "carousels/carousel-01-news-vs-disclosure",
+      "notes": ""
+    },
+    {
+      "id": "week1-17",
+      "status": "approved",
+      "mode": "schedule",
+      "timezone": "Asia/Kuwait",
+      "scheduledAt": "2026-06-01T08:00:00.000Z",
+      "platform": "x",
+      "title": "X Launch Banner",
+      "caption": "بورصة الكويت في جيبك.\n\nتابع الأسعار، الأخبار، الإفصاحات، ومحفظتك من تطبيق عربي واحد.\n\nحمّل بورصتي من App Store.",
+      "mediaPaths": [
+        "/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/04_assets/ready_to_post_by_week/launch_batch_01_week_1/x-banners/x-01-launch.png"
+      ],
+      "sourceAsset": "x-banners/x-01-launch.png",
+      "notes": ""
+    },
+    {
+      "id": "week1-18",
+      "status": "approved",
+      "mode": "schedule",
+      "timezone": "Asia/Kuwait",
+      "scheduledAt": "2026-06-01T08:10:00.000Z",
+      "platform": "x",
+      "title": "X Disclosure Banner",
+      "caption": "الإفصاح الرسمي أولاً.\n\nالخبر مهم، لكن المصدر هو البداية الأوضح للقراءة.\n\nحمّل بورصتي من App Store.",
+      "mediaPaths": [
+        "/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/04_assets/ready_to_post_by_week/launch_batch_01_week_1/x-banners/x-02-disclosure.png"
+      ],
+      "sourceAsset": "x-banners/x-02-disclosure.png",
+      "notes": ""
+    }
+  ]
+}

@@ -1,0 +1,597 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=3240, initial-scale=1">
+  <title>Boursati Standalone Launch Wall</title>
+  <style>
+    :root {
+      --blue: #1148ff;
+      --blue-soft: #5f8cff;
+      --dark: #080a0f;
+      --ink: #f8f8f3;
+      --muted: rgba(248,248,243,0.72);
+      --line: rgba(248,248,243,0.18);
+      --arabic: "IBM Plex Sans Arabic", "Noto Sans Arabic", "Geeza Pro", Arial, sans-serif;
+      --latin: "Inter", "SF Pro Display", Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    html,
+    body {
+      width: 3240px;
+      height: 3240px;
+      margin: 0;
+      overflow: hidden;
+      background: var(--dark);
+      font-family: var(--arabic);
+    }
+
+    .wall {
+      width: 3240px;
+      height: 3240px;
+      display: grid;
+      grid-template-columns: repeat(3, 1080px);
+      grid-template-rows: repeat(3, 1080px);
+      background: var(--dark);
+    }
+
+    .tile {
+      position: relative;
+      width: 1080px;
+      height: 1080px;
+      overflow: hidden;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 72% 12%, rgba(17,72,255,0.42), transparent 27%),
+        linear-gradient(120deg, rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(255,255,255,0.025) 1px, transparent 1px),
+        var(--dark);
+      background-size: auto, 80px 80px, 80px 80px, auto;
+      border: 1px solid rgba(255,255,255,0.035);
+    }
+
+    .tile.light {
+      color: #07090d;
+      background:
+        radial-gradient(circle at 75% 8%, rgba(17,72,255,0.17), transparent 28%),
+        linear-gradient(120deg, rgba(8,10,15,0.06) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(8,10,15,0.045) 1px, transparent 1px),
+        #f4f1e9;
+    }
+
+    .brand {
+      position: absolute;
+      top: 70px;
+      right: 70px;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      direction: ltr;
+      font: 950 34px/1 var(--latin);
+      letter-spacing: 0.04em;
+    }
+
+    .brand img {
+      width: 64px;
+      height: 64px;
+      border-radius: 14px;
+    }
+
+    .kicker {
+      position: absolute;
+      top: 185px;
+      right: 74px;
+      z-index: 20;
+      width: 450px;
+      color: var(--muted);
+      font: 850 24px/1.35 "JetBrains Mono", "SF Mono", monospace;
+      direction: ltr;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    .light .kicker { color: rgba(8,10,15,0.5); }
+
+    h2 {
+      position: absolute;
+      z-index: 20;
+      right: 70px;
+      top: 265px;
+      width: 780px;
+      margin: 0;
+      font-size: 118px;
+      line-height: 0.96;
+      font-weight: 950;
+      letter-spacing: 0;
+      text-align: right;
+    }
+
+    .body {
+      position: absolute;
+      z-index: 20;
+      right: 74px;
+      top: 575px;
+      width: 720px;
+      margin: 0;
+      font-size: 38px;
+      line-height: 1.42;
+      font-weight: 780;
+      text-align: right;
+    }
+
+    .tags {
+      position: absolute;
+      z-index: 20;
+      right: 74px;
+      bottom: 132px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      max-width: 820px;
+    }
+
+    .tags span {
+      padding: 13px 19px 16px;
+      border: 3px solid currentColor;
+      font-size: 24px;
+      line-height: 1;
+      font-weight: 950;
+      background: rgba(255,255,255,0.06);
+    }
+
+    .light .tags span { background: rgba(255,255,255,0.42); }
+
+    .cta {
+      position: absolute;
+      z-index: 22;
+      left: 70px;
+      bottom: 72px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      direction: ltr;
+      padding: 12px;
+      border: 1px solid rgba(248,248,243,0.18);
+      background: rgba(5,7,11,0.66);
+    }
+
+    .light .cta {
+      border-color: rgba(8,10,15,0.18);
+      background: rgba(255,255,255,0.72);
+    }
+
+    .url {
+      display: inline-flex;
+      align-items: center;
+      height: 46px;
+      padding: 0 17px;
+      background: var(--blue);
+      color: #fff;
+      font: 900 18px/1 "JetBrains Mono", "SF Mono", monospace;
+    }
+
+    .cta img {
+      width: 156px;
+      height: auto;
+    }
+
+    .stroke {
+      position: absolute;
+      z-index: 4;
+      pointer-events: none;
+      background: var(--blue);
+      opacity: 0.9;
+    }
+
+    .stroke.one {
+      left: -160px;
+      top: 460px;
+      width: 1110px;
+      height: 150px;
+      clip-path: polygon(0 35%, 17% 12%, 34% 46%, 54% 7%, 75% 40%, 100% 15%, 100% 67%, 74% 87%, 53% 56%, 34% 92%, 15% 64%, 0 80%);
+      transform: rotate(-8deg);
+    }
+
+    .stroke.two {
+      right: -190px;
+      bottom: 235px;
+      width: 780px;
+      height: 86px;
+      transform: rotate(-14deg);
+    }
+
+    .stroke.three {
+      left: 60px;
+      bottom: 250px;
+      width: 650px;
+      height: 10px;
+      transform: rotate(-12deg);
+      background: rgba(248,248,243,0.76);
+      box-shadow: 0 70px 0 rgba(87,138,255,0.72);
+    }
+
+    .light .stroke.three {
+      background: rgba(8,10,15,0.5);
+      box-shadow: 0 70px 0 rgba(17,72,255,0.5);
+    }
+
+    .tower {
+      position: absolute;
+      z-index: 6;
+      left: -95px;
+      top: 205px;
+      width: 410px;
+      height: 760px;
+      color: rgba(248,248,243,0.64);
+    }
+
+    .light .tower { color: rgba(8,10,15,0.36); }
+
+    .tower svg { width: 100%; height: 100%; }
+
+    .glyph {
+      position: absolute;
+      z-index: 5;
+      left: 76px;
+      top: 240px;
+      width: 360px;
+      height: 360px;
+      border: 18px solid currentColor;
+      border-radius: 50%;
+      opacity: 0.17;
+    }
+
+    .glyph::before,
+    .glyph::after {
+      content: "";
+      position: absolute;
+      inset: 70px -50px auto;
+      height: 16px;
+      background: currentColor;
+      transform: rotate(-18deg);
+    }
+
+    .glyph::after {
+      inset: auto -24px 92px;
+      transform: rotate(13deg);
+    }
+
+    .tile.center h2 {
+      top: 245px;
+      font-size: 136px;
+      width: 850px;
+    }
+
+    .tile.center .body {
+      top: 610px;
+      font-size: 42px;
+      width: 780px;
+    }
+  </style>
+</head>
+<body>
+  <main class="wall">
+    <section class="tile center">
+      <div class="brand"><span>BOURSATI</span><img src="file:///Users/home/Documents/Mamoon%20Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/assets/app-icon-1024.png" alt=""></div>
+      <div class="kicker">LAUNCH / KUWAIT MARKET</div>
+      <div class="stroke one"></div><div class="stroke two"></div><div class="stroke three"></div>
+      <div class="tower" aria-hidden="true"><svg viewBox="0 0 520 720">
+        <defs>
+          <clipPath id="rightLower"><circle cx="338" cy="348" r="86" /></clipPath>
+          <clipPath id="rightUpper"><circle cx="352" cy="154" r="58" /></clipPath>
+          <clipPath id="leftSphere"><circle cx="152" cy="334" r="78" /></clipPath>
+        </defs>
+        <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+          <g stroke-width="11">
+            <path d="M300 680 C310 556 315 454 332 406 C342 377 345 320 342 280 C338 226 342 184 352 112" />
+            <path d="M386 680 C374 556 369 454 352 406 C342 377 339 320 342 280 C346 226 356 184 364 112" opacity="0.82" />
+            <path d="M112 680 C120 560 126 448 144 382 C154 346 158 304 154 260 C150 206 156 160 166 94" />
+            <path d="M188 680 C180 560 174 448 158 382 C148 346 144 304 148 260 C152 206 160 160 172 94" opacity="0.82" />
+            <path d="M238 680 L248 230 L255 104" />
+            <path d="M256 680 L248 230 L242 138" opacity="0.62" />
+          </g>
+          <g stroke-width="7">
+            <path d="M352 112 L356 18" />
+            <path d="M364 112 L356 18" opacity="0.72" />
+            <path d="M166 94 L174 30" />
+            <path d="M172 94 L174 30" opacity="0.72" />
+            <path d="M248 230 L248 62" opacity="0.74" />
+          </g>
+          <g stroke-width="8">
+            <circle cx="338" cy="348" r="86" />
+            <circle cx="352" cy="154" r="58" />
+            <circle cx="152" cy="334" r="78" />
+          </g>
+          <g stroke-width="3" opacity="0.62">
+            <g clip-path="url(#rightLower)">
+              <path d="M240 308 C292 332 344 356 438 400" />
+              <path d="M240 340 C292 364 344 388 438 432" />
+              <path d="M250 388 C306 360 366 330 434 290" />
+              <path d="M250 426 C306 398 366 368 434 328" />
+              <path d="M282 266 C318 324 364 374 426 422" />
+              <path d="M250 424 C306 366 366 312 430 264" />
+            </g>
+            <g clip-path="url(#rightUpper)">
+              <path d="M284 130 C326 150 370 170 420 196" />
+              <path d="M284 158 C326 178 370 198 420 224" />
+              <path d="M292 198 C330 168 372 138 412 110" />
+              <path d="M306 102 C328 138 362 174 408 204" />
+            </g>
+            <g clip-path="url(#leftSphere)">
+              <path d="M62 302 C104 324 152 350 242 386" />
+              <path d="M66 334 C108 356 156 382 240 416" />
+              <path d="M74 390 C118 360 174 326 232 286" />
+              <path d="M82 422 C124 392 178 356 226 320" />
+              <path d="M100 260 C132 318 172 368 222 410" />
+            </g>
+          </g>
+          <g stroke-width="7">
+            <path d="M260 330 C305 342 372 344 418 330" />
+            <path d="M262 360 C310 372 374 372 416 360" opacity="0.78" />
+            <path d="M296 176 C328 184 378 184 406 176" opacity="0.72" />
+          </g>
+          <path d="M52 680 H430" stroke-width="10" opacity="0.78" />
+        </g>
+      </svg></div>
+      <h2>بورصة الكويت<br>في جيبك</h2>
+      <p class="body">تطبيق عربي يجمع أهم مسارات المتابعة في مكان واحد.</p>
+      <div class="tags"><span>أسعار</span><span>أخبار</span><span>إفصاحات</span></div>
+      <div class="cta"><span class="url">boursati.app</span><img src="file:///Users/home/Documents/Mamoon%20Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/assets/app-store-badge.svg" alt=""></div>
+    </section>
+
+    <section class="tile">
+      <div class="brand"><span>BOURSATI</span><img src="file:///Users/home/Documents/Mamoon%20Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/assets/app-icon-1024.png" alt=""></div>
+      <div class="kicker">MARKET / SUMMARY</div>
+      <div class="stroke one"></div><div class="glyph"></div>
+      <h2>ابدأ<br>بالملخص</h2>
+      <p class="body">صورة أوضح لحركة السوق قبل الدخول في تفاصيل الشركات.</p>
+      <div class="tags"><span>ملخص</span><span>سوق</span><span>متابعة</span></div>
+      <div class="cta"><span class="url">boursati.app</span><img src="file:///Users/home/Documents/Mamoon%20Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/assets/app-store-badge.svg" alt=""></div>
+    </section>
+
+    <section class="tile">
+      <div class="brand"><span>BOURSATI</span><img src="file:///Users/home/Documents/Mamoon%20Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/assets/app-icon-1024.png" alt=""></div>
+      <div class="kicker">DISCLOSURES / SOURCE</div>
+      <div class="stroke two"></div><div class="tower" aria-hidden="true"><svg viewBox="0 0 520 720">
+        <defs>
+          <clipPath id="rightLower"><circle cx="338" cy="348" r="86" /></clipPath>
+          <clipPath id="rightUpper"><circle cx="352" cy="154" r="58" /></clipPath>
+          <clipPath id="leftSphere"><circle cx="152" cy="334" r="78" /></clipPath>
+        </defs>
+        <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+          <g stroke-width="11">
+            <path d="M300 680 C310 556 315 454 332 406 C342 377 345 320 342 280 C338 226 342 184 352 112" />
+            <path d="M386 680 C374 556 369 454 352 406 C342 377 339 320 342 280 C346 226 356 184 364 112" opacity="0.82" />
+            <path d="M112 680 C120 560 126 448 144 382 C154 346 158 304 154 260 C150 206 156 160 166 94" />
+            <path d="M188 680 C180 560 174 448 158 382 C148 346 144 304 148 260 C152 206 160 160 172 94" opacity="0.82" />
+            <path d="M238 680 L248 230 L255 104" />
+            <path d="M256 680 L248 230 L242 138" opacity="0.62" />
+          </g>
+          <g stroke-width="7">
+            <path d="M352 112 L356 18" />
+            <path d="M364 112 L356 18" opacity="0.72" />
+            <path d="M166 94 L174 30" />
+            <path d="M172 94 L174 30" opacity="0.72" />
+            <path d="M248 230 L248 62" opacity="0.74" />
+          </g>
+          <g stroke-width="8">
+            <circle cx="338" cy="348" r="86" />
+            <circle cx="352" cy="154" r="58" />
+            <circle cx="152" cy="334" r="78" />
+          </g>
+          <g stroke-width="3" opacity="0.62">
+            <g clip-path="url(#rightLower)">
+              <path d="M240 308 C292 332 344 356 438 400" />
+              <path d="M240 340 C292 364 344 388 438 432" />
+              <path d="M250 388 C306 360 366 330 434 290" />
+              <path d="M250 426 C306 398 366 368 434 328" />
+              <path d="M282 266 C318 324 364 374 426 422" />
+              <path d="M250 424 C306 366 366 312 430 264" />
+            </g>
+            <g clip-path="url(#rightUpper)">
+              <path d="M284 130 C326 150 370 170 420 196" />
+              <path d="M284 158 C326 178 370 198 420 224" />
+              <path d="M292 198 C330 168 372 138 412 110" />
+              <path d="M306 102 C328 138 362 174 408 204" />
+            </g>
+            <g clip-path="url(#leftSphere)">
+              <path d="M62 302 C104 324 152 350 242 386" />
+              <path d="M66 334 C108 356 156 382 240 416" />
+              <path d="M74 390 C118 360 174 326 232 286" />
+              <path d="M82 422 C124 392 178 356 226 320" />
+              <path d="M100 260 C132 318 172 368 222 410" />
+            </g>
+          </g>
+          <g stroke-width="7">
+            <path d="M260 330 C305 342 372 344 418 330" />
+            <path d="M262 360 C310 372 374 372 416 360" opacity="0.78" />
+            <path d="M296 176 C328 184 378 184 406 176" opacity="0.72" />
+          </g>
+          <path d="M52 680 H430" stroke-width="10" opacity="0.78" />
+        </g>
+      </svg></div>
+      <h2>الإفصاح<br>أولاً</h2>
+      <p class="body">اقرأ المصدر الرسمي، ثم اربط الخبر بسياق الشركة.</p>
+      <div class="tags"><span>إفصاح</span><span>مصدر</span><span>شركة</span></div>
+      <div class="cta"><span class="url">boursati.app</span><img src="file:///Users/home/Documents/Mamoon%20Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/assets/app-store-badge.svg" alt=""></div>
+    </section>
+
+    <section class="tile light">
+      <div class="brand"><span>BOURSATI</span><img src="file:///Users/home/Documents/Mamoon%20Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/assets/app-icon-1024.png" alt=""></div>
+      <div class="kicker">COMPANIES / CONTEXT</div>
+      <div class="stroke one"></div><div class="glyph"></div>
+      <h2>الشركة<br>هي السياق</h2>
+      <p class="body">من الخبر إلى بيانات الشركة في خطوات واضحة.</p>
+      <div class="tags"><span>شركات</span><span>بيانات</span><span>ربط</span></div>
+      <div class="cta"><span class="url">boursati.app</span><img src="file:///Users/home/Documents/Mamoon%20Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/assets/app-store-badge.svg" alt=""></div>
+    </section>
+
+    <section class="tile">
+      <div class="brand"><span>BOURSATI</span><img src="file:///Users/home/Documents/Mamoon%20Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/assets/app-icon-1024.png" alt=""></div>
+      <div class="kicker">PORTFOLIO / REGISTER</div>
+      <div class="stroke one"></div><div class="stroke three"></div>
+      <h2>محفظتك<br>كدفتر واضح</h2>
+      <p class="body">مكوناتك وتوزيعاتك المتوقعة مرتبة للمراجعة السريعة.</p>
+      <div class="tags"><span>محفظة</span><span>توزيعات</span><span>ترتيب</span></div>
+      <div class="cta"><span class="url">boursati.app</span><img src="file:///Users/home/Documents/Mamoon%20Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/assets/app-store-badge.svg" alt=""></div>
+    </section>
+
+    <section class="tile light">
+      <div class="brand"><span>BOURSATI</span><img src="file:///Users/home/Documents/Mamoon%20Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/assets/app-icon-1024.png" alt=""></div>
+      <div class="kicker">ALERTS / FAST PATH</div>
+      <div class="stroke two"></div><div class="tower" aria-hidden="true"><svg viewBox="0 0 520 720">
+        <defs>
+          <clipPath id="rightLower"><circle cx="338" cy="348" r="86" /></clipPath>
+          <clipPath id="rightUpper"><circle cx="352" cy="154" r="58" /></clipPath>
+          <clipPath id="leftSphere"><circle cx="152" cy="334" r="78" /></clipPath>
+        </defs>
+        <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+          <g stroke-width="11">
+            <path d="M300 680 C310 556 315 454 332 406 C342 377 345 320 342 280 C338 226 342 184 352 112" />
+            <path d="M386 680 C374 556 369 454 352 406 C342 377 339 320 342 280 C346 226 356 184 364 112" opacity="0.82" />
+            <path d="M112 680 C120 560 126 448 144 382 C154 346 158 304 154 260 C150 206 156 160 166 94" />
+            <path d="M188 680 C180 560 174 448 158 382 C148 346 144 304 148 260 C152 206 160 160 172 94" opacity="0.82" />
+            <path d="M238 680 L248 230 L255 104" />
+            <path d="M256 680 L248 230 L242 138" opacity="0.62" />
+          </g>
+          <g stroke-width="7">
+            <path d="M352 112 L356 18" />
+            <path d="M364 112 L356 18" opacity="0.72" />
+            <path d="M166 94 L174 30" />
+            <path d="M172 94 L174 30" opacity="0.72" />
+            <path d="M248 230 L248 62" opacity="0.74" />
+          </g>
+          <g stroke-width="8">
+            <circle cx="338" cy="348" r="86" />
+            <circle cx="352" cy="154" r="58" />
+            <circle cx="152" cy="334" r="78" />
+          </g>
+          <g stroke-width="3" opacity="0.62">
+            <g clip-path="url(#rightLower)">
+              <path d="M240 308 C292 332 344 356 438 400" />
+              <path d="M240 340 C292 364 344 388 438 432" />
+              <path d="M250 388 C306 360 366 330 434 290" />
+              <path d="M250 426 C306 398 366 368 434 328" />
+              <path d="M282 266 C318 324 364 374 426 422" />
+              <path d="M250 424 C306 366 366 312 430 264" />
+            </g>
+            <g clip-path="url(#rightUpper)">
+              <path d="M284 130 C326 150 370 170 420 196" />
+              <path d="M284 158 C326 178 370 198 420 224" />
+              <path d="M292 198 C330 168 372 138 412 110" />
+              <path d="M306 102 C328 138 362 174 408 204" />
+            </g>
+            <g clip-path="url(#leftSphere)">
+              <path d="M62 302 C104 324 152 350 242 386" />
+              <path d="M66 334 C108 356 156 382 240 416" />
+              <path d="M74 390 C118 360 174 326 232 286" />
+              <path d="M82 422 C124 392 178 356 226 320" />
+              <path d="M100 260 C132 318 172 368 222 410" />
+            </g>
+          </g>
+          <g stroke-width="7">
+            <path d="M260 330 C305 342 372 344 418 330" />
+            <path d="M262 360 C310 372 374 372 416 360" opacity="0.78" />
+            <path d="M296 176 C328 184 378 184 406 176" opacity="0.72" />
+          </g>
+          <path d="M52 680 H430" stroke-width="10" opacity="0.78" />
+        </g>
+      </svg></div>
+      <h2>التنبيه<br>يفتح المسار</h2>
+      <p class="body">من الإشعار إلى الإفصاح، ثم إلى تفاصيل الشركة.</p>
+      <div class="tags"><span>تنبيه</span><span>إفصاح</span><span>فتح</span></div>
+      <div class="cta"><span class="url">boursati.app</span><img src="file:///Users/home/Documents/Mamoon%20Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/assets/app-store-badge.svg" alt=""></div>
+    </section>
+
+    <section class="tile">
+      <div class="brand"><span>BOURSATI</span><img src="file:///Users/home/Documents/Mamoon%20Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/assets/app-icon-1024.png" alt=""></div>
+      <div class="kicker">NEWS / FOLLOW-UP</div>
+      <div class="stroke one"></div><div class="glyph"></div>
+      <h2>الخبر<br>يحتاج متابعة</h2>
+      <p class="body">فرق بين عنوان سريع ومسار رسمي داخل تطبيق واحد.</p>
+      <div class="tags"><span>خبر</span><span>إفصاح</span><span>تمييز</span></div>
+      <div class="cta"><span class="url">boursati.app</span><img src="file:///Users/home/Documents/Mamoon%20Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/assets/app-store-badge.svg" alt=""></div>
+    </section>
+
+    <section class="tile light">
+      <div class="brand"><span>BOURSATI</span><img src="file:///Users/home/Documents/Mamoon%20Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/assets/app-icon-1024.png" alt=""></div>
+      <div class="kicker">ARABIC / IOS</div>
+      <div class="stroke three"></div><div class="tower" aria-hidden="true"><svg viewBox="0 0 520 720">
+        <defs>
+          <clipPath id="rightLower"><circle cx="338" cy="348" r="86" /></clipPath>
+          <clipPath id="rightUpper"><circle cx="352" cy="154" r="58" /></clipPath>
+          <clipPath id="leftSphere"><circle cx="152" cy="334" r="78" /></clipPath>
+        </defs>
+        <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+          <g stroke-width="11">
+            <path d="M300 680 C310 556 315 454 332 406 C342 377 345 320 342 280 C338 226 342 184 352 112" />
+            <path d="M386 680 C374 556 369 454 352 406 C342 377 339 320 342 280 C346 226 356 184 364 112" opacity="0.82" />
+            <path d="M112 680 C120 560 126 448 144 382 C154 346 158 304 154 260 C150 206 156 160 166 94" />
+            <path d="M188 680 C180 560 174 448 158 382 C148 346 144 304 148 260 C152 206 160 160 172 94" opacity="0.82" />
+            <path d="M238 680 L248 230 L255 104" />
+            <path d="M256 680 L248 230 L242 138" opacity="0.62" />
+          </g>
+          <g stroke-width="7">
+            <path d="M352 112 L356 18" />
+            <path d="M364 112 L356 18" opacity="0.72" />
+            <path d="M166 94 L174 30" />
+            <path d="M172 94 L174 30" opacity="0.72" />
+            <path d="M248 230 L248 62" opacity="0.74" />
+          </g>
+          <g stroke-width="8">
+            <circle cx="338" cy="348" r="86" />
+            <circle cx="352" cy="154" r="58" />
+            <circle cx="152" cy="334" r="78" />
+          </g>
+          <g stroke-width="3" opacity="0.62">
+            <g clip-path="url(#rightLower)">
+              <path d="M240 308 C292 332 344 356 438 400" />
+              <path d="M240 340 C292 364 344 388 438 432" />
+              <path d="M250 388 C306 360 366 330 434 290" />
+              <path d="M250 426 C306 398 366 368 434 328" />
+              <path d="M282 266 C318 324 364 374 426 422" />
+              <path d="M250 424 C306 366 366 312 430 264" />
+            </g>
+            <g clip-path="url(#rightUpper)">
+              <path d="M284 130 C326 150 370 170 420 196" />
+              <path d="M284 158 C326 178 370 198 420 224" />
+              <path d="M292 198 C330 168 372 138 412 110" />
+              <path d="M306 102 C328 138 362 174 408 204" />
+            </g>
+            <g clip-path="url(#leftSphere)">
+              <path d="M62 302 C104 324 152 350 242 386" />
+              <path d="M66 334 C108 356 156 382 240 416" />
+              <path d="M74 390 C118 360 174 326 232 286" />
+              <path d="M82 422 C124 392 178 356 226 320" />
+              <path d="M100 260 C132 318 172 368 222 410" />
+            </g>
+          </g>
+          <g stroke-width="7">
+            <path d="M260 330 C305 342 372 344 418 330" />
+            <path d="M262 360 C310 372 374 372 416 360" opacity="0.78" />
+            <path d="M296 176 C328 184 378 184 406 176" opacity="0.72" />
+          </g>
+          <path d="M52 680 H430" stroke-width="10" opacity="0.78" />
+        </g>
+      </svg></div>
+      <h2>تطبيق عربي<br>للسوق الكويتي</h2>
+      <p class="body">واجهة عربية مصممة لمتابعة بورصة الكويت بوضوح.</p>
+      <div class="tags"><span>عربي</span><span>iOS</span><span>كويت</span></div>
+      <div class="cta"><span class="url">boursati.app</span><img src="file:///Users/home/Documents/Mamoon%20Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/assets/app-store-badge.svg" alt=""></div>
+    </section>
+
+    <section class="tile">
+      <div class="brand"><span>BOURSATI</span><img src="file:///Users/home/Documents/Mamoon%20Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/assets/app-icon-1024.png" alt=""></div>
+      <div class="kicker">AVAILABLE / APP STORE</div>
+      <div class="stroke two"></div><div class="stroke three"></div>
+      <h2>متاح الآن<br>على App Store</h2>
+      <p class="body">حمّل بورصتي وابدأ متابعة السوق من مكان واحد.</p>
+      <div class="tags"><span>تحميل</span><span>App Store</span><span>بورصتي</span></div>
+      <div class="cta"><span class="url">boursati.app</span><img src="file:///Users/home/Documents/Mamoon%20Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/assets/app-store-badge.svg" alt=""></div>
+    </section>
+  </main>
+</body>
+</html>

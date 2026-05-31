@@ -1,0 +1,140 @@
+{
+  "generatedAt": "2026-05-28T00:40:00+03:00",
+  "queue": [
+    {
+      "id": "launch-wall-01",
+      "status": "approved",
+      "mode": "schedule",
+      "timezone": "Asia/Kuwait",
+      "scheduledAt": "2026-05-27T22:00:00Z",
+      "platform": "instagram",
+      "title": "Launch Wall 09 - News Follow-up",
+      "caption": "الخبر يحتاج متابعة.\n\nفرق بين عنوان سريع ومسار رسمي داخل تطبيق واحد.\n\nboursati.app",
+      "mediaPaths": [
+        "/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/04_assets/active_instagram_mosaic/launch_wall_standalone_v1/tiles/launch-wall-standalone-bottom-right.png"
+      ],
+      "sourceAsset": "active_instagram_mosaic/launch_wall_standalone_v1/tiles/launch-wall-standalone-bottom-right.png",
+      "notes": "Upload first for final profile grid ordering."
+    },
+    {
+      "id": "launch-wall-02",
+      "status": "approved",
+      "mode": "schedule",
+      "timezone": "Asia/Kuwait",
+      "scheduledAt": "2026-05-27T22:02:00Z",
+      "platform": "instagram",
+      "title": "Launch Wall 08 - Arabic iOS",
+      "caption": "تطبيق عربي للسوق الكويتي.\n\nواجهة عربية مصممة لمتابعة بورصة الكويت بوضوح.\n\nboursati.app",
+      "mediaPaths": [
+        "/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/04_assets/active_instagram_mosaic/launch_wall_standalone_v1/tiles/launch-wall-standalone-bottom-center.png"
+      ],
+      "sourceAsset": "active_instagram_mosaic/launch_wall_standalone_v1/tiles/launch-wall-standalone-bottom-center.png",
+      "notes": ""
+    },
+    {
+      "id": "launch-wall-03",
+      "status": "approved",
+      "mode": "schedule",
+      "timezone": "Asia/Kuwait",
+      "scheduledAt": "2026-05-27T22:04:00Z",
+      "platform": "instagram",
+      "title": "Launch Wall 07 - App Store",
+      "caption": "متاح الآن على App Store.\n\nحمّل بورصتي وابدأ متابعة بورصة الكويت من مكان واحد.\n\nboursati.app",
+      "mediaPaths": [
+        "/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/04_assets/active_instagram_mosaic/launch_wall_standalone_v1/tiles/launch-wall-standalone-bottom-left.png"
+      ],
+      "sourceAsset": "active_instagram_mosaic/launch_wall_standalone_v1/tiles/launch-wall-standalone-bottom-left.png",
+      "notes": ""
+    },
+    {
+      "id": "launch-wall-04",
+      "status": "approved",
+      "mode": "schedule",
+      "timezone": "Asia/Kuwait",
+      "scheduledAt": "2026-05-27T22:06:00Z",
+      "platform": "instagram",
+      "title": "Launch Wall 06 - Company Context",
+      "caption": "الشركة هي السياق.\n\nمن الخبر إلى بيانات الشركة في خطوات واضحة.\n\nboursati.app",
+      "mediaPaths": [
+        "/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/04_assets/active_instagram_mosaic/launch_wall_standalone_v1/tiles/launch-wall-standalone-middle-right.png"
+      ],
+      "sourceAsset": "active_instagram_mosaic/launch_wall_standalone_v1/tiles/launch-wall-standalone-middle-right.png",
+      "notes": ""
+    },
+    {
+      "id": "launch-wall-05",
+      "status": "approved",
+      "mode": "schedule",
+      "timezone": "Asia/Kuwait",
+      "scheduledAt": "2026-05-27T22:08:00Z",
+      "platform": "instagram",
+      "title": "Launch Wall 05 - Portfolio",
+      "caption": "محفظتك كدفتر واضح.\n\nمكوناتك وتوزيعاتك المتوقعة مرتبة للمراجعة السريعة.\n\nboursati.app",
+      "mediaPaths": [
+        "/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/04_assets/active_instagram_mosaic/launch_wall_standalone_v1/tiles/launch-wall-standalone-middle-center.png"
+      ],
+      "sourceAsset": "active_instagram_mosaic/launch_wall_standalone_v1/tiles/launch-wall-standalone-middle-center.png",
+      "notes": ""
+    },
+    {
+      "id": "launch-wall-06",
+      "status": "approved",
+      "mode": "schedule",
+      "timezone": "Asia/Kuwait",
+      "scheduledAt": "2026-05-27T22:10:00Z",
+      "platform": "instagram",
+      "title": "Launch Wall 04 - Alerts",
+      "caption": "التنبيه يفتح المسار.\n\nمن الإشعار إلى الإفصاح، ثم إلى تفاصيل الشركة.\n\nboursati.app",
+      "mediaPaths": [
+        "/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/04_assets/active_instagram_mosaic/launch_wall_standalone_v1/tiles/launch-wall-standalone-middle-left.png"
+      ],
+      "sourceAsset": "active_instagram_mosaic/launch_wall_standalone_v1/tiles/launch-wall-standalone-middle-left.png",
+      "notes": ""
+    },
+    {
+      "id": "launch-wall-07",
+      "status": "approved",
+      "mode": "schedule",
+      "timezone": "Asia/Kuwait",
+      "scheduledAt": "2026-05-27T22:12:00Z",
+      "platform": "instagram",
+      "title": "Launch Wall 03 - Main Launch",
+      "caption": "بورصة الكويت في جيبك.\n\nبورصتي يجمع أهم مسارات المتابعة في تطبيق عربي واحد.\n\nboursati.app",
+      "mediaPaths": [
+        "/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/04_assets/active_instagram_mosaic/launch_wall_standalone_v1/tiles/launch-wall-standalone-top-right.png"
+      ],
+      "sourceAsset": "active_instagram_mosaic/launch_wall_standalone_v1/tiles/launch-wall-standalone-top-right.png",
+      "notes": ""
+    },
+    {
+      "id": "launch-wall-08",
+      "status": "approved",
+      "mode": "schedule",
+      "timezone": "Asia/Kuwait",
+      "scheduledAt": "2026-05-27T22:14:00Z",
+      "platform": "instagram",
+      "title": "Launch Wall 02 - Market Summary",
+      "caption": "ابدأ بالملخص.\n\nصورة أوضح لحركة السوق قبل الدخول في تفاصيل الشركات.\n\nboursati.app",
+      "mediaPaths": [
+        "/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/04_assets/active_instagram_mosaic/launch_wall_standalone_v1/tiles/launch-wall-standalone-top-center.png"
+      ],
+      "sourceAsset": "active_instagram_mosaic/launch_wall_standalone_v1/tiles/launch-wall-standalone-top-center.png",
+      "notes": ""
+    },
+    {
+      "id": "launch-wall-09",
+      "status": "approved",
+      "mode": "schedule",
+      "timezone": "Asia/Kuwait",
+      "scheduledAt": "2026-05-27T22:16:00Z",
+      "platform": "instagram",
+      "title": "Launch Wall 01 - Disclosure",
+      "caption": "الإفصاح أولاً.\n\nاقرأ المصدر الرسمي، ثم اربط الخبر بسياق الشركة.\n\nboursati.app",
+      "mediaPaths": [
+        "/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/04_assets/active_instagram_mosaic/launch_wall_standalone_v1/tiles/launch-wall-standalone-top-left.png"
+      ],
+      "sourceAsset": "active_instagram_mosaic/launch_wall_standalone_v1/tiles/launch-wall-standalone-top-left.png",
+      "notes": "Upload last so it lands top-left in the final profile grid."
+    }
+  ]
+}

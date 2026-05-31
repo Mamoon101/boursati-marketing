@@ -1,0 +1,140 @@
+{
+  "generatedAt": "2026-05-27T19:55:54Z",
+  "queue": [
+    {
+      "id": "mosaic-launch-01",
+      "status": "approved",
+      "mode": "schedule",
+      "timezone": "Asia/Kuwait",
+      "scheduledAt": "2026-05-27T19:59:54Z",
+      "platform": "instagram",
+      "title": "Mosaic 09 - Bottom Right",
+      "caption": "بورصة الكويت في جيبك.\n\nبورصتي يجمع أهم مسارات المتابعة في تطبيق عربي واحد.\n\nحمّل بورصتي من App Store.",
+      "mediaPaths": [
+        "/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/04_assets/active_instagram_mosaic/grid_01_launch_pocket_dedicated_3x3/tiles/grid-01-launch-pocket-dedicated-bottom-right.png"
+      ],
+      "sourceAsset": "active_instagram_mosaic/grid_01_launch_pocket_dedicated_3x3/tiles/grid-01-launch-pocket-dedicated-bottom-right.png",
+      "notes": "Post first so the full profile grid assembles correctly."
+    },
+    {
+      "id": "mosaic-launch-02",
+      "status": "approved",
+      "mode": "schedule",
+      "timezone": "Asia/Kuwait",
+      "scheduledAt": "2026-05-27T20:01:54Z",
+      "platform": "instagram",
+      "title": "Mosaic 08 - Bottom Center",
+      "caption": "بورصة الكويت في جيبك.\n\nبورصتي يجمع أهم مسارات المتابعة في تطبيق عربي واحد.\n\nحمّل بورصتي من App Store.",
+      "mediaPaths": [
+        "/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/04_assets/active_instagram_mosaic/grid_01_launch_pocket_dedicated_3x3/tiles/grid-01-launch-pocket-dedicated-bottom-center.png"
+      ],
+      "sourceAsset": "active_instagram_mosaic/grid_01_launch_pocket_dedicated_3x3/tiles/grid-01-launch-pocket-dedicated-bottom-center.png",
+      "notes": ""
+    },
+    {
+      "id": "mosaic-launch-03",
+      "status": "approved",
+      "mode": "schedule",
+      "timezone": "Asia/Kuwait",
+      "scheduledAt": "2026-05-27T20:03:54Z",
+      "platform": "instagram",
+      "title": "Mosaic 07 - Bottom Left",
+      "caption": "بورصة الكويت في جيبك.\n\nبورصتي يجمع أهم مسارات المتابعة في تطبيق عربي واحد.\n\nحمّل بورصتي من App Store.",
+      "mediaPaths": [
+        "/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/04_assets/active_instagram_mosaic/grid_01_launch_pocket_dedicated_3x3/tiles/grid-01-launch-pocket-dedicated-bottom-left.png"
+      ],
+      "sourceAsset": "active_instagram_mosaic/grid_01_launch_pocket_dedicated_3x3/tiles/grid-01-launch-pocket-dedicated-bottom-left.png",
+      "notes": ""
+    },
+    {
+      "id": "mosaic-launch-04",
+      "status": "approved",
+      "mode": "schedule",
+      "timezone": "Asia/Kuwait",
+      "scheduledAt": "2026-05-27T20:05:54Z",
+      "platform": "instagram",
+      "title": "Mosaic 06 - Middle Right",
+      "caption": "بورصة الكويت في جيبك.\n\nبورصتي يجمع أهم مسارات المتابعة في تطبيق عربي واحد.\n\nحمّل بورصتي من App Store.",
+      "mediaPaths": [
+        "/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/04_assets/active_instagram_mosaic/grid_01_launch_pocket_dedicated_3x3/tiles/grid-01-launch-pocket-dedicated-middle-right.png"
+      ],
+      "sourceAsset": "active_instagram_mosaic/grid_01_launch_pocket_dedicated_3x3/tiles/grid-01-launch-pocket-dedicated-middle-right.png",
+      "notes": ""
+    },
+    {
+      "id": "mosaic-launch-05",
+      "status": "approved",
+      "mode": "schedule",
+      "timezone": "Asia/Kuwait",
+      "scheduledAt": "2026-05-27T20:07:54Z",
+      "platform": "instagram",
+      "title": "Mosaic 05 - Middle Center",
+      "caption": "بورصة الكويت في جيبك.\n\nبورصتي يجمع أهم مسارات المتابعة في تطبيق عربي واحد.\n\nحمّل بورصتي من App Store.",
+      "mediaPaths": [
+        "/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/04_assets/active_instagram_mosaic/grid_01_launch_pocket_dedicated_3x3/tiles/grid-01-launch-pocket-dedicated-middle-center.png"
+      ],
+      "sourceAsset": "active_instagram_mosaic/grid_01_launch_pocket_dedicated_3x3/tiles/grid-01-launch-pocket-dedicated-middle-center.png",
+      "notes": ""
+    },
+    {
+      "id": "mosaic-launch-06",
+      "status": "approved",
+      "mode": "schedule",
+      "timezone": "Asia/Kuwait",
+      "scheduledAt": "2026-05-27T20:09:54Z",
+      "platform": "instagram",
+      "title": "Mosaic 04 - Middle Left",
+      "caption": "بورصة الكويت في جيبك.\n\nبورصتي يجمع أهم مسارات المتابعة في تطبيق عربي واحد.\n\nحمّل بورصتي من App Store.",
+      "mediaPaths": [
+        "/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/04_assets/active_instagram_mosaic/grid_01_launch_pocket_dedicated_3x3/tiles/grid-01-launch-pocket-dedicated-middle-left.png"
+      ],
+      "sourceAsset": "active_instagram_mosaic/grid_01_launch_pocket_dedicated_3x3/tiles/grid-01-launch-pocket-dedicated-middle-left.png",
+      "notes": ""
+    },
+    {
+      "id": "mosaic-launch-07",
+      "status": "approved",
+      "mode": "schedule",
+      "timezone": "Asia/Kuwait",
+      "scheduledAt": "2026-05-27T20:11:54Z",
+      "platform": "instagram",
+      "title": "Mosaic 03 - Top Right",
+      "caption": "بورصة الكويت في جيبك.\n\nبورصتي يجمع أهم مسارات المتابعة في تطبيق عربي واحد.\n\nحمّل بورصتي من App Store.",
+      "mediaPaths": [
+        "/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/04_assets/active_instagram_mosaic/grid_01_launch_pocket_dedicated_3x3/tiles/grid-01-launch-pocket-dedicated-top-right.png"
+      ],
+      "sourceAsset": "active_instagram_mosaic/grid_01_launch_pocket_dedicated_3x3/tiles/grid-01-launch-pocket-dedicated-top-right.png",
+      "notes": ""
+    },
+    {
+      "id": "mosaic-launch-08",
+      "status": "approved",
+      "mode": "schedule",
+      "timezone": "Asia/Kuwait",
+      "scheduledAt": "2026-05-27T20:13:54Z",
+      "platform": "instagram",
+      "title": "Mosaic 02 - Top Center",
+      "caption": "بورصة الكويت في جيبك.\n\nبورصتي يجمع أهم مسارات المتابعة في تطبيق عربي واحد.\n\nحمّل بورصتي من App Store.",
+      "mediaPaths": [
+        "/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/04_assets/active_instagram_mosaic/grid_01_launch_pocket_dedicated_3x3/tiles/grid-01-launch-pocket-dedicated-top-center.png"
+      ],
+      "sourceAsset": "active_instagram_mosaic/grid_01_launch_pocket_dedicated_3x3/tiles/grid-01-launch-pocket-dedicated-top-center.png",
+      "notes": ""
+    },
+    {
+      "id": "mosaic-launch-09",
+      "status": "approved",
+      "mode": "schedule",
+      "timezone": "Asia/Kuwait",
+      "scheduledAt": "2026-05-27T20:15:54Z",
+      "platform": "instagram",
+      "title": "Mosaic 01 - Top Left",
+      "caption": "بورصة الكويت في جيبك.\n\nبورصتي يجمع أهم مسارات المتابعة في تطبيق عربي واحد.\n\nحمّل بورصتي من App Store.",
+      "mediaPaths": [
+        "/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/04_assets/active_instagram_mosaic/grid_01_launch_pocket_dedicated_3x3/tiles/grid-01-launch-pocket-dedicated-top-left.png"
+      ],
+      "sourceAsset": "active_instagram_mosaic/grid_01_launch_pocket_dedicated_3x3/tiles/grid-01-launch-pocket-dedicated-top-left.png",
+      "notes": "Post last so it lands at top-left of the final Instagram profile grid."
+    }
+  ]
+}

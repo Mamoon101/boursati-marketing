@@ -1,0 +1,23 @@
+file '/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/captures/screenshots/light/01-stock-overview.png'
+duration 2.2
+file '/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/captures/screenshots/light/02-stock-financials.png'
+duration 2.2
+file '/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/captures/screenshots/light/03-stock-management.png'
+duration 2.2
+file '/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/captures/screenshots/light/04-stock-disclosures.png'
+duration 2.2
+file '/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/captures/screenshots/light/05-home-market-summary.png'
+duration 2.2
+file '/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/captures/screenshots/light/06-companies-list.png'
+duration 2.2
+file '/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/captures/screenshots/light/07-portfolio-positions.png'
+duration 2.2
+file '/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/captures/screenshots/light/08-portfolio-dividends.png'
+duration 2.2
+file '/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/captures/screenshots/light/09-watchlist.png'
+duration 2.2
+file '/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/captures/screenshots/light/10-alerts.png'
+duration 2.2
+file '/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/captures/screenshots/light/11-news.png'
+duration 2.2
+file '/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/captures/screenshots/light/11-news.png'

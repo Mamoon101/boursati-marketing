@@ -1,0 +1,140 @@
+{
+  "generatedAt": "2026-05-27T23:11:49Z",
+  "queue": [
+    {
+      "id": "dense-poster-01",
+      "status": "approved",
+      "mode": "schedule",
+      "timezone": "Asia/Kuwait",
+      "scheduledAt": "2026-05-27T23:15:49Z",
+      "platform": "instagram",
+      "title": "Dense Single Poster 09 - Bottom Right",
+      "caption": "بورصة الكويت في جيبك.\n\nبورصتي يجمع أهم مسارات المتابعة في تطبيق عربي واحد.\n\nboursati.app",
+      "mediaPaths": [
+        "/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/04_assets/active_instagram_mosaic/single_poster_dense_split_v2/tiles/single-poster-dense-bottom-right.png"
+      ],
+      "sourceAsset": "active_instagram_mosaic/single_poster_dense_split_v2/tiles/single-poster-dense-bottom-right.png",
+      "notes": "Upload order for Instagram 3x3 reconstruction."
+    },
+    {
+      "id": "dense-poster-02",
+      "status": "approved",
+      "mode": "schedule",
+      "timezone": "Asia/Kuwait",
+      "scheduledAt": "2026-05-27T23:17:49Z",
+      "platform": "instagram",
+      "title": "Dense Single Poster 08 - Bottom Center",
+      "caption": "بورصة الكويت في جيبك.\n\nبورصتي يجمع أهم مسارات المتابعة في تطبيق عربي واحد.\n\nboursati.app",
+      "mediaPaths": [
+        "/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/04_assets/active_instagram_mosaic/single_poster_dense_split_v2/tiles/single-poster-dense-bottom-center.png"
+      ],
+      "sourceAsset": "active_instagram_mosaic/single_poster_dense_split_v2/tiles/single-poster-dense-bottom-center.png",
+      "notes": ""
+    },
+    {
+      "id": "dense-poster-03",
+      "status": "approved",
+      "mode": "schedule",
+      "timezone": "Asia/Kuwait",
+      "scheduledAt": "2026-05-27T23:19:49Z",
+      "platform": "instagram",
+      "title": "Dense Single Poster 07 - Bottom Left",
+      "caption": "بورصة الكويت في جيبك.\n\nبورصتي يجمع أهم مسارات المتابعة في تطبيق عربي واحد.\n\nboursati.app",
+      "mediaPaths": [
+        "/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/04_assets/active_instagram_mosaic/single_poster_dense_split_v2/tiles/single-poster-dense-bottom-left.png"
+      ],
+      "sourceAsset": "active_instagram_mosaic/single_poster_dense_split_v2/tiles/single-poster-dense-bottom-left.png",
+      "notes": ""
+    },
+    {
+      "id": "dense-poster-04",
+      "status": "approved",
+      "mode": "schedule",
+      "timezone": "Asia/Kuwait",
+      "scheduledAt": "2026-05-27T23:21:49Z",
+      "platform": "instagram",
+      "title": "Dense Single Poster 06 - Middle Right",
+      "caption": "بورصة الكويت في جيبك.\n\nبورصتي يجمع أهم مسارات المتابعة في تطبيق عربي واحد.\n\nboursati.app",
+      "mediaPaths": [
+        "/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/04_assets/active_instagram_mosaic/single_poster_dense_split_v2/tiles/single-poster-dense-middle-right.png"
+      ],
+      "sourceAsset": "active_instagram_mosaic/single_poster_dense_split_v2/tiles/single-poster-dense-middle-right.png",
+      "notes": ""
+    },
+    {
+      "id": "dense-poster-05",
+      "status": "approved",
+      "mode": "schedule",
+      "timezone": "Asia/Kuwait",
+      "scheduledAt": "2026-05-27T23:23:49Z",
+      "platform": "instagram",
+      "title": "Dense Single Poster 05 - Middle Center",
+      "caption": "بورصة الكويت في جيبك.\n\nبورصتي يجمع أهم مسارات المتابعة في تطبيق عربي واحد.\n\nboursati.app",
+      "mediaPaths": [
+        "/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/04_assets/active_instagram_mosaic/single_poster_dense_split_v2/tiles/single-poster-dense-middle-center.png"
+      ],
+      "sourceAsset": "active_instagram_mosaic/single_poster_dense_split_v2/tiles/single-poster-dense-middle-center.png",
+      "notes": ""
+    },
+    {
+      "id": "dense-poster-06",
+      "status": "approved",
+      "mode": "schedule",
+      "timezone": "Asia/Kuwait",
+      "scheduledAt": "2026-05-27T23:25:49Z",
+      "platform": "instagram",
+      "title": "Dense Single Poster 04 - Middle Left",
+      "caption": "بورصة الكويت في جيبك.\n\nبورصتي يجمع أهم مسارات المتابعة في تطبيق عربي واحد.\n\nboursati.app",
+      "mediaPaths": [
+        "/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/04_assets/active_instagram_mosaic/single_poster_dense_split_v2/tiles/single-poster-dense-middle-left.png"
+      ],
+      "sourceAsset": "active_instagram_mosaic/single_poster_dense_split_v2/tiles/single-poster-dense-middle-left.png",
+      "notes": ""
+    },
+    {
+      "id": "dense-poster-07",
+      "status": "approved",
+      "mode": "schedule",
+      "timezone": "Asia/Kuwait",
+      "scheduledAt": "2026-05-27T23:27:49Z",
+      "platform": "instagram",
+      "title": "Dense Single Poster 03 - Top Right",
+      "caption": "بورصة الكويت في جيبك.\n\nبورصتي يجمع أهم مسارات المتابعة في تطبيق عربي واحد.\n\nboursati.app",
+      "mediaPaths": [
+        "/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/04_assets/active_instagram_mosaic/single_poster_dense_split_v2/tiles/single-poster-dense-top-right.png"
+      ],
+      "sourceAsset": "active_instagram_mosaic/single_poster_dense_split_v2/tiles/single-poster-dense-top-right.png",
+      "notes": ""
+    },
+    {
+      "id": "dense-poster-08",
+      "status": "approved",
+      "mode": "schedule",
+      "timezone": "Asia/Kuwait",
+      "scheduledAt": "2026-05-27T23:29:49Z",
+      "platform": "instagram",
+      "title": "Dense Single Poster 02 - Top Center",
+      "caption": "بورصة الكويت في جيبك.\n\nبورصتي يجمع أهم مسارات المتابعة في تطبيق عربي واحد.\n\nboursati.app",
+      "mediaPaths": [
+        "/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/04_assets/active_instagram_mosaic/single_poster_dense_split_v2/tiles/single-poster-dense-top-center.png"
+      ],
+      "sourceAsset": "active_instagram_mosaic/single_poster_dense_split_v2/tiles/single-poster-dense-top-center.png",
+      "notes": ""
+    },
+    {
+      "id": "dense-poster-09",
+      "status": "approved",
+      "mode": "schedule",
+      "timezone": "Asia/Kuwait",
+      "scheduledAt": "2026-05-27T23:31:49Z",
+      "platform": "instagram",
+      "title": "Dense Single Poster 01 - Top Left",
+      "caption": "بورصة الكويت في جيبك.\n\nبورصتي يجمع أهم مسارات المتابعة في تطبيق عربي واحد.\n\nboursati.app",
+      "mediaPaths": [
+        "/Users/home/Documents/Mamoon Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/04_assets/active_instagram_mosaic/single_poster_dense_split_v2/tiles/single-poster-dense-top-left.png"
+      ],
+      "sourceAsset": "active_instagram_mosaic/single_poster_dense_split_v2/tiles/single-poster-dense-top-left.png",
+      "notes": "Upload last so it lands top-left."
+    }
+  ]
+}
