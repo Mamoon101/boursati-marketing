@@ -4,6 +4,7 @@ Start here. This folder contains the approved Boursati brand direction, marketin
 
 ## Where To Look
 
+- `../About Boursati.md` - product context for agents before creating strategy, copy, assets, captions, videos, or automation.
 - `01_brand_guidelines/` - approved art direction and brand rules.
 - `02_marketing_plan/` - launch positioning and channel strategy.
 - `03_content_strategy/` - captions, calendar, posting plan, and content maps.
