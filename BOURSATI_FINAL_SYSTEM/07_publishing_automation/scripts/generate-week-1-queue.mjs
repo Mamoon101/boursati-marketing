@@ -98,7 +98,7 @@ const posts = [
     dayOffset: 1,
     platform: "instagram",
     slot: "feed",
-    asset: "instagram-feed/feed-01-launch-portrait.png",
+    asset: "instagram-feed-profile-grid-safe/feed-01-launch-profile-grid-safe.png",
     title: "Main Launch Feed",
     caption: "بورصة الكويت في جيبك.\n\nأسعار، أخبار، إفصاحات، ومحفظتك في تطبيق عربي واحد.\n\nحمّل بورصتي من App Store."
   },
@@ -106,7 +106,7 @@ const posts = [
     dayOffset: 2,
     platform: "instagram",
     slot: "feed",
-    asset: "instagram-feed/feed-02-market-clarity.png",
+    asset: "instagram-feed-profile-grid-safe/feed-02-market-clarity-profile-grid-safe.png",
     title: "Market Clarity",
     caption: "تابع السوق بدون لويه.\n\nابدأ من ملخص واضح، ثم ادخل في التفاصيل التي تهمك.\n\nحمّل بورصتي من App Store."
   },
@@ -122,7 +122,7 @@ const posts = [
     dayOffset: 3,
     platform: "instagram",
     slot: "feed",
-    asset: "instagram-feed/feed-03-disclosures.png",
+    asset: "instagram-feed-profile-grid-safe/feed-03-disclosures-profile-grid-safe.png",
     title: "Disclosure Awareness",
     caption: "الإفصاح قبل الكلام.\n\nابدأ من المصدر الرسمي، ثم اقرأ السياق داخل بورصتي.\n\nحمّل بورصتي من App Store."
   },
@@ -138,7 +138,7 @@ const posts = [
     dayOffset: 4,
     platform: "instagram",
     slot: "feed",
-    asset: "instagram-feed/proof-01-home-summary.png",
+    asset: "instagram-feed-profile-grid-safe/proof-grid-01-home-summary-profile-grid-safe.png",
     title: "Product Proof",
     caption: "ملخص السوق أمامك.\n\nلقطة حقيقية من بورصتي لبداية أوضح قبل التفاصيل.\n\nحمّل بورصتي من App Store."
   },

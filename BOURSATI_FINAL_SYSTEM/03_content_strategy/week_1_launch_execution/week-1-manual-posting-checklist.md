@@ -24,10 +24,10 @@
 
 ## Feed Posts
 
-- [ ] Post `feed-01-launch-portrait.png`.
-- [ ] Post `feed-02-market-clarity.png`.
-- [ ] Post `feed-03-disclosures.png`.
-- [ ] Post `proof-01-home-summary.png`.
+- [ ] Post `instagram-feed-profile-grid-safe/feed-01-launch-profile-grid-safe.png`.
+- [ ] Post `instagram-feed-profile-grid-safe/feed-02-market-clarity-profile-grid-safe.png`.
+- [ ] Post `instagram-feed-profile-grid-safe/feed-03-disclosures-profile-grid-safe.png`.
+- [ ] Post `instagram-feed-profile-grid-safe/proof-grid-01-home-summary-profile-grid-safe.png`.
 
 ## Stories / Reels
 
@@ -49,4 +49,3 @@
 - [ ] Capture screenshots of the Instagram grid.
 - [ ] Record what performed best after 24 hours.
 - [ ] Do not open Week 2 review until Week 1 is complete.
-

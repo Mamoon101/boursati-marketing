@@ -41,7 +41,7 @@ grid-07  grid-08  grid-09
 
 Post:
 
-`feed-01-launch-portrait.png`
+`instagram-feed-profile-grid-safe/feed-01-launch-profile-grid-safe.png`
 
 Purpose: introduce the app promise in one clear post.
 
@@ -49,7 +49,7 @@ Purpose: introduce the app promise in one clear post.
 
 Post:
 
-`feed-02-market-clarity.png`
+`instagram-feed-profile-grid-safe/feed-02-market-clarity-profile-grid-safe.png`
 
 Purpose: show the practical value: start from a clear market summary before details.
 
@@ -61,7 +61,7 @@ Optional story:
 
 Post:
 
-`feed-03-disclosures.png`
+`instagram-feed-profile-grid-safe/feed-03-disclosures-profile-grid-safe.png`
 
 Purpose: teach the source-first behavior.
 
@@ -73,7 +73,7 @@ Optional story:
 
 Post:
 
-`proof-01-home-summary.png`
+`instagram-feed-profile-grid-safe/proof-grid-01-home-summary-profile-grid-safe.png`
 
 Purpose: show a real app screen after the brand promise has landed.
 
@@ -100,4 +100,3 @@ Purpose: set the X profile/header direction and reinforce launch/disclosure posi
 - Do not overuse screenshots in Week 1. Product proof should appear after the visual identity is established.
 - Keep CTA App Store-only.
 - Avoid investment advice or stock recommendations.
-
