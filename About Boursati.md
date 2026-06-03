@@ -4,6 +4,8 @@ This document gives Hermes and any future marketing agent the product context ne
 
 ## Short Version
 
+Boursati helps people in Kuwait follow Boursa Kuwait clearly, in Arabic, from one organized iPhone app.
+
 Boursati is an Arabic-first iPhone app for people who follow the Kuwait stock market. It brings Boursa Kuwait companies, prices, charts, disclosures, PDF filings, financial statements, dividends, portfolio tracking, watchlists, alerts, market summaries, and push notifications into one clean mobile experience.
 
 The app is not a brokerage, not a trading app, and not an investment advisor. It helps users follow the market and understand their own portfolio. It does not let users buy or sell stocks.
@@ -55,6 +57,14 @@ The best mental model is the "morning-coffee investor": someone who opens the ap
 
 Boursati is the Kuwait-native market follow-up app.
 
+The simple marketing promise is:
+
+> بورصة الكويت بوضوح، من مكان واحد.
+
+English working line:
+
+> Follow Boursa Kuwait clearly, from one organized mobile place.
+
 It sits between:
 
 - the official Boursa Kuwait sources, which are important but not always mobile-friendly,
@@ -63,6 +73,16 @@ It sits between:
 - brokerage apps, which are for trading rather than calm market follow-up.
 
 Boursati's advantage is focus: it is built around Kuwait, Arabic, disclosures, portfolio visibility, and a serious mobile experience.
+
+## Message Hierarchy
+
+Every campaign should make the product easy to understand before becoming poetic or abstract.
+
+1. First: Boursati helps you follow Boursa Kuwait clearly.
+2. Second: It brings prices, news, disclosures, companies, alerts, summaries, and portfolio context into one Arabic app.
+3. Third: The strongest behavior is moving from notification to official disclosure quickly.
+4. Fourth: The daily habit is starting from the market picture, then going deeper.
+5. Fifth: More editorial lines like "كل مسار له مكان" can support the brand after the practical value is clear.
 
 ## What Makes It Different
 
@@ -161,7 +181,7 @@ Screenshots should not be forced into every post. Use app screens only when the 
 Use these themes when creating assets or campaigns:
 
 - Launch awareness: Boursati is now available for Kuwait market followers.
-- Market clarity: follow prices, news, disclosures, companies, and portfolio in one place.
+- Market clarity: follow Boursa Kuwait from one organized Arabic app.
 - Disclosure speed: from push notification to official disclosure quickly.
 - Portfolio calm: track positions without spreadsheet clutter.
 - Daily habit: open Boursati with morning coffee before or during the market day.
@@ -193,4 +213,3 @@ This document was prepared from the current Boursa Kuwait product repo:
 - `/Users/home/Documents/Mamoon Notes/Projects/boursa-kuwait/docs/DATA_MAP_SIMPLIFIED.md`
 - `/Users/home/Documents/Mamoon Notes/Projects/boursa-kuwait/docs/brand/01-design-brief.md`
 - `/Users/home/Documents/Mamoon Notes/Projects/boursa-kuwait/docs/brand/05-brand-voice-guide.md`
-
