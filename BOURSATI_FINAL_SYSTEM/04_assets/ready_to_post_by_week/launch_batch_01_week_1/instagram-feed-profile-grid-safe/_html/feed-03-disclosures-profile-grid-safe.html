@@ -23,7 +23,7 @@
     html,
     body {
       width: 1080px;
-      height: 1440px;
+      height: 1080px;
       margin: 0;
       overflow: hidden;
       background: var(--dark);
@@ -167,6 +167,74 @@
       box-shadow: 0 58px 0 rgba(87,138,255,0.64);
     }
 
+    .kinetic i {
+      right: 11%;
+      top: 19%;
+      width: 22%;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      border: 2px solid rgba(255,255,255,0.16);
+      opacity: 0;
+    }
+
+    .art-direction[data-visual="radar"] .kinetic i {
+      opacity: 0.9;
+      background:
+        repeating-radial-gradient(circle, transparent 0 18px, rgba(255,255,255,0.14) 19px 21px),
+        conic-gradient(from 20deg, transparent 0 70%, rgba(87,138,255,0.34) 82%, transparent 100%);
+      box-shadow: 0 0 80px rgba(17,72,255,0.35);
+    }
+
+    .art-direction[data-visual="blueprint"] {
+      background:
+        radial-gradient(circle at 70% 16%, rgba(17,72,255,0.36), transparent 27%),
+        linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(255,255,255,0.045) 1px, transparent 1px),
+        linear-gradient(130deg, rgba(17,72,255,0.16), transparent 36%),
+        var(--dark);
+      background-size: auto, 48px 48px, 48px 48px, auto, auto;
+    }
+
+    .art-direction[data-visual="ledger"] .kinetic::before {
+      height: 12%;
+      top: 46%;
+      clip-path: polygon(0 18%, 15% 18%, 15% 62%, 31% 62%, 31% 28%, 48% 28%, 48% 74%, 64% 74%, 64% 40%, 81% 40%, 81% 14%, 100% 14%, 100% 68%, 0 88%);
+    }
+
+    .art-direction[data-visual="signal"] .kinetic::after {
+      height: 3px;
+      box-shadow:
+        0 40px 0 rgba(87,138,255,0.52),
+        0 80px 0 rgba(255,255,255,0.24),
+        0 120px 0 rgba(17,72,255,0.5);
+    }
+
+    .art-direction[data-visual="spotlight"] {
+      background:
+        radial-gradient(circle at 77% 20%, rgba(87,138,255,0.56), transparent 22%),
+        radial-gradient(circle at 16% 86%, rgba(255,255,255,0.09), transparent 26%),
+        linear-gradient(120deg, rgba(255,255,255,0.045) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(255,255,255,0.028) 1px, transparent 1px),
+        var(--dark);
+      background-size: auto, auto, 76px 76px, 76px 76px, auto;
+    }
+
+    .art-direction[data-visual="night-sea"] {
+      background:
+        radial-gradient(circle at 72% 18%, rgba(17,72,255,0.36), transparent 24%),
+        linear-gradient(150deg, rgba(3,12,25,0.1), rgba(17,72,255,0.16) 52%, rgba(2,4,8,0.0) 52%),
+        linear-gradient(120deg, rgba(255,255,255,0.04) 1px, transparent 1px),
+        var(--dark);
+      background-size: auto, auto, 70px 70px, auto;
+    }
+
+    .art-direction[data-visual="sadu-night"] .kinetic::before {
+      opacity: 0.82;
+      background:
+        repeating-linear-gradient(135deg, rgba(255,255,255,0.16) 0 14px, transparent 14px 30px),
+        var(--blue);
+    }
+
     .content {
       position: absolute;
       z-index: 12;
@@ -268,6 +336,107 @@
       background: rgba(244,240,231,0.94);
       color: var(--ink);
       border-color: rgba(10,11,13,0.16);
+    }
+
+    .art-direction[data-platform="instagram-feed-profile-grid-safe"] .app-cta {
+      bottom: 210px;
+    }
+
+    .art-direction[data-platform="instagram-square"] .brand {
+      top: 38px;
+      right: 42px;
+      gap: 10px;
+      font-size: 18px;
+    }
+
+    .art-direction[data-platform="instagram-square"] .brand img {
+      width: 40px;
+      height: 40px;
+    }
+
+    .art-direction[data-platform="instagram-square"] .content {
+      top: 14%;
+      right: 7%;
+      width: 76%;
+    }
+
+    .art-direction[data-platform="instagram-square"] h1 {
+      font-size: clamp(86px, 11vw, 122px);
+      line-height: 0.93;
+      max-width: 780px;
+      margin-right: 0;
+    }
+
+    .art-direction[data-platform="instagram-square"] .subline {
+      width: min(100%, 760px);
+      margin-top: 18px;
+      font-size: 28px;
+      line-height: 1.32;
+    }
+
+    .art-direction[data-platform="instagram-square"] .labels {
+      margin-top: 20px;
+      gap: 9px;
+    }
+
+    .art-direction[data-platform="instagram-square"] .labels span {
+      padding: 7px 10px 8px;
+      font-size: 17px;
+    }
+
+    .art-direction[data-platform="instagram-square"] .copy-plate {
+      inset: -22px -26px -20px -40px;
+      opacity: 0.76;
+    }
+
+    .art-direction[data-platform="instagram-square"] .app-cta {
+      left: 70px;
+      right: 54px;
+      bottom: 34px;
+      min-width: auto;
+      height: 54px;
+    }
+
+    .art-direction[data-platform="instagram-square"] .anchor {
+      left: -8%;
+      bottom: -4%;
+      width: 56%;
+      height: 62%;
+    }
+
+    .art-direction[data-platform="instagram-square"] .anchor-sadu-weave {
+      left: -2%;
+      top: 23%;
+      width: 56%;
+      height: 54%;
+    }
+
+    .art-direction[data-platform="instagram-square"] .anchor-kuwait-towers {
+      left: -7%;
+      bottom: -9%;
+      width: 52%;
+      height: 64%;
+    }
+
+    .art-direction[data-platform="instagram-square"] .anchor-dhow-sail {
+      left: -6%;
+      bottom: -3%;
+      width: 56%;
+      height: 56%;
+    }
+
+    .art-direction[data-platform="instagram-square"] .anchor-source-seal {
+      left: -2%;
+      top: 28%;
+      width: 42%;
+      height: 42%;
+    }
+
+    .art-direction[data-platform="instagram-square"] .anchor-market-arch {
+      left: -3%;
+      bottom: -5%;
+      width: 48%;
+      height: 58%;
     }
 
     .app-cta img {
@@ -513,7 +682,7 @@
   </style>
 </head>
 <body>
-  <main class="art-direction" data-family="vertical-cover" data-platform="instagram-feed-profile-grid-safe" data-palette="dark" data-cta-zone="full">
+  <main class="art-direction" data-family="vertical-cover" data-platform="instagram-square" data-palette="dark" data-cta-zone="full" data-visual="standard">
     <div class="brand" aria-hidden="true">
       <span class="brand-word">BOURSATI</span>
       <img class="brand-mark" alt="" src="file:///Users/home/Documents/Mamoon%20Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/assets/app-icon-1024.png">

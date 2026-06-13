@@ -463,6 +463,103 @@ export function buildHtml(asset, options = {}) {
       bottom: 210px;
     }
 
+    .art-direction[data-platform="instagram-square"] .brand {
+      top: 38px;
+      right: 42px;
+      gap: 10px;
+      font-size: 18px;
+    }
+
+    .art-direction[data-platform="instagram-square"] .brand img {
+      width: 40px;
+      height: 40px;
+    }
+
+    .art-direction[data-platform="instagram-square"] .content {
+      top: 14%;
+      right: 7%;
+      width: 76%;
+    }
+
+    .art-direction[data-platform="instagram-square"] h1 {
+      font-size: clamp(86px, 11vw, 122px);
+      line-height: 0.93;
+      max-width: 780px;
+      margin-right: 0;
+    }
+
+    .art-direction[data-platform="instagram-square"] .subline {
+      width: min(100%, 760px);
+      margin-top: 18px;
+      font-size: 28px;
+      line-height: 1.32;
+    }
+
+    .art-direction[data-platform="instagram-square"] .labels {
+      margin-top: 20px;
+      gap: 9px;
+    }
+
+    .art-direction[data-platform="instagram-square"] .labels span {
+      padding: 7px 10px 8px;
+      font-size: 17px;
+    }
+
+    .art-direction[data-platform="instagram-square"] .copy-plate {
+      inset: -22px -26px -20px -40px;
+      opacity: 0.76;
+    }
+
+    .art-direction[data-platform="instagram-square"] .app-cta {
+      left: 70px;
+      right: 54px;
+      bottom: 34px;
+      min-width: auto;
+      height: 54px;
+    }
+
+    .art-direction[data-platform="instagram-square"] .anchor {
+      left: -8%;
+      bottom: -4%;
+      width: 56%;
+      height: 62%;
+    }
+
+    .art-direction[data-platform="instagram-square"] .anchor-sadu-weave {
+      left: -2%;
+      top: 23%;
+      width: 56%;
+      height: 54%;
+    }
+
+    .art-direction[data-platform="instagram-square"] .anchor-kuwait-towers {
+      left: -7%;
+      bottom: -9%;
+      width: 52%;
+      height: 64%;
+    }
+
+    .art-direction[data-platform="instagram-square"] .anchor-dhow-sail {
+      left: -6%;
+      bottom: -3%;
+      width: 56%;
+      height: 56%;
+    }
+
+    .art-direction[data-platform="instagram-square"] .anchor-source-seal {
+      left: -2%;
+      top: 28%;
+      width: 42%;
+      height: 42%;
+    }
+
+    .art-direction[data-platform="instagram-square"] .anchor-market-arch {
+      left: -3%;
+      bottom: -5%;
+      width: 48%;
+      height: 58%;
+    }
+
     .app-cta img {
       width: 148px;
       height: auto;

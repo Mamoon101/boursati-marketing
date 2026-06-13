@@ -23,9 +23,9 @@ const feedAssets = (await loadFamilyAssets())
   .map((asset) => ({
     ...asset,
     id: asset.id.replace("-portrait", "").replace("proof-01", "proof-grid-01") + "-profile-grid-safe",
-    platform: "instagram-feed-profile-grid-safe",
-    aspect: "profile-grid",
-    contextAr: "Instagram feed post adapted to the current 3:4 profile grid thumbnail.",
+    platform: "instagram-square",
+    aspect: "square",
+    contextAr: "Instagram feed post adapted to square grid-native visibility.",
   }));
 
 await mkdir(outputRoot, { recursive: true });
@@ -38,9 +38,9 @@ These are the Week 1 Instagram feed assets adapted for Instagram profile-grid vi
 Use these for Instagram feed publishing when the post must look good both:
 
 - opened as a normal post,
-- viewed as a vertical profile-grid thumbnail.
+- viewed as a profile-grid thumbnail.
 
-Instagram's current profile grid displays posts as vertical 3:4 thumbnails. These files use native 1080x1440 exports so the grid view and opened post stay aligned.
+These files use native 1080x1080 exports so the grid view and opened post show the same composition.
 `;
 
 await writeFile(join(outputRoot, "README.md"), readme, "utf8");
@@ -61,7 +61,7 @@ for (const asset of feedAssets) {
   const html = buildHtml(asset, {
     assetSrc: (assetPath) => pathToFileURL(resolve(projectRoot, assetPath)).href,
   });
-  const size = ASPECTS["profile-grid"];
+  const size = ASPECTS[asset.aspect];
   const htmlPath = join(htmlRoot, `${asset.id}.html`);
   const outputPath = join(outputRoot, `${asset.id}.png`);
 
