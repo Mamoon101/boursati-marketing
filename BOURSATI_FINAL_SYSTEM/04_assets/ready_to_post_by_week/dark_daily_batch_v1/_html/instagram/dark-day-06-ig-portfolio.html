@@ -1,130 +1,9 @@
-import { readFileSync } from "node:fs";
-import { fileURLToPath } from "node:url";
-
-export const ASPECTS = {
-  square: { width: 1080, height: 1080 },
-  portrait: { width: 1080, height: 1350 },
-  "profile-grid": { width: 1080, height: 1440 },
-  story: { width: 1080, height: 1920 },
-  "x-banner": { width: 1600, height: 900 },
-};
-
-const brandAssets = {
-  logo: "assets/app-icon-1024.png",
-  appStoreBadge: "assets/app-store-badge.svg",
-  url: "boursati.app",
-};
-
-const families = new Set([
-  "phone-hero-banner",
-  "market-card",
-  "featured-grid",
-  "launch-poster",
-  "announcement",
-  "vertical-cover",
-  "product-proof",
-  "daily-tip",
-  "market-summary-tip",
-]);
-const anchors = new Set(["kuwait-towers", "dhow-sail", "sadu-weave", "source-seal", "market-arch"]);
-const palettes = new Set(["dark", "paper"]);
-const forbiddenPatterns = [
-  /اشتر|للشراء|قم بالشراء|بيع الآن|بع الآن|اربح|عوائد مضمونة|أفضل سهم|توصيات يومية/i,
-  /\b(buy|sell|hold|profit|guaranteed|premium|subscription|trial|paywall|pricing|unlock|buying power|liquidity is power|markets move you ahead)\b/i,
-  /Android|Google Play/i,
-];
-
-export async function loadFamilyAssets(fileUrl = new URL("../content/assets.json", import.meta.url)) {
-  const contents = readFileSync(fileURLToPath(fileUrl), "utf8");
-  const assets = JSON.parse(contents);
-  if (!Array.isArray(assets)) {
-    throw new Error("assets.json must contain an array");
-  }
-  return assets;
-}
-
-export function validateAsset(asset) {
-  const required = [
-    "id",
-    "family",
-    "platform",
-    "aspect",
-    "anchor",
-    "palette",
-    "headlineAr",
-    "sublineAr",
-    "contextAr",
-    "phoneScreen",
-    "labels",
-    "cta",
-  ];
-
-  for (const field of required) {
-    if (asset[field] === undefined || asset[field] === "") {
-      throw new Error(`${asset.id ?? "asset"} missing ${field}`);
-    }
-  }
-
-  if (!families.has(asset.family)) {
-    throw new Error(`${asset.id} has unsupported family`);
-  }
-  if (!ASPECTS[asset.aspect]) {
-    throw new Error(`${asset.id} has unsupported aspect`);
-  }
-  if (!anchors.has(asset.anchor)) {
-    throw new Error(`${asset.id} has unsupported anchor`);
-  }
-  if (!palettes.has(asset.palette)) {
-    throw new Error(`${asset.id} has unsupported palette`);
-  }
-  if (asset.cta !== "حمّل بورصتي من App Store") {
-    throw new Error(`${asset.id} must use App Store CTA`);
-  }
-  if (["phone-hero-banner", "product-proof"].includes(asset.family) && !asset.phoneScreen) {
-    throw new Error(`${asset.id} needs a real app screen`);
-  }
-  if (!["phone-hero-banner", "product-proof"].includes(asset.family) && asset.phoneScreen !== null) {
-    throw new Error(`${asset.id} should not include a screen`);
-  }
-  if (!Array.isArray(asset.labels) || asset.labels.length !== 4) {
-    throw new Error(`${asset.id} needs four labels`);
-  }
-
-  const copy = [asset.headlineAr, asset.sublineAr, asset.contextAr, asset.cta, ...asset.labels].join(" ");
-  for (const pattern of forbiddenPatterns) {
-    if (pattern.test(copy)) {
-      throw new Error(`${asset.id} contains blocked wording`);
-    }
-  }
-}
-
-export function buildHtml(asset, options = {}) {
-  validateAsset(asset);
-
-  const size = ASPECTS[asset.aspect];
-  const visualStyle = asset.visualStyle ?? "standard";
-  const assetSrc = options.assetSrc ?? ((assetPath) => `../../../../${assetPath}`);
-  const logoSrc = assetSrc(brandAssets.logo);
-  const appStoreBadgeSrc = assetSrc(brandAssets.appStoreBadge);
-  const labels = asset.labels.map((label) => `<span>${escapeHtml(label)}</span>`).join("");
-  const ctaZone = getFamilyCtaZone(asset);
-  const phone = asset.phoneScreen
-    ? `<figure class="phone-stage" aria-hidden="true">
-        <div class="phone-shell">
-          <span class="phone-notch"></span>
-          <span class="phone-side-button phone-side-button-left"></span>
-          <span class="phone-side-button phone-side-button-right"></span>
-          <img alt="" src="${escapeAttribute(assetSrc(asset.phoneScreen))}">
-        </div>
-      </figure>`
-    : "";
-
-  return `<!doctype html>
+<!doctype html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=${size.width}, initial-scale=1">
-  <title>${escapeHtml(asset.id)}</title>
+  <meta name="viewport" content="width=1080, initial-scale=1">
+  <title>dark-day-06-ig-portfolio</title>
   <style>
     :root {
       --blue: #1148FF;
@@ -143,8 +22,8 @@ export function buildHtml(asset, options = {}) {
 
     html,
     body {
-      width: ${size.width}px;
-      height: ${size.height}px;
+      width: 1080px;
+      height: 1440px;
       margin: 0;
       overflow: hidden;
       background: var(--dark);
@@ -706,146 +585,12 @@ export function buildHtml(asset, options = {}) {
   </style>
 </head>
 <body>
-  <main class="art-direction" data-family="${escapeAttribute(asset.family)}" data-platform="${escapeAttribute(asset.platform)}" data-palette="${escapeAttribute(asset.palette)}" data-cta-zone="${escapeAttribute(ctaZone)}" data-visual="${escapeAttribute(visualStyle)}">
+  <main class="art-direction" data-family="market-summary-tip" data-platform="instagram-feed-profile-grid-safe" data-palette="dark" data-cta-zone="right" data-visual="ledger">
     <div class="brand" aria-hidden="true">
       <span class="brand-word">BOURSATI</span>
-      <img class="brand-mark" alt="" src="${escapeAttribute(logoSrc)}">
+      <img class="brand-mark" alt="" src="file:///Users/home/Documents/Mamoon%20Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/assets/app-icon-1024.png">
     </div>
-    <div class="anchor anchor-${escapeAttribute(asset.anchor)}" aria-hidden="true">${buildAnchorSvg(asset.anchor)}</div>
-    <div class="kinetic" aria-hidden="true"><i></i></div>
-    ${phone}
-    <section class="content">
-      <span class="copy-plate" aria-hidden="true"></span>
-      <h1>${escapeHtml(asset.headlineAr)}</h1>
-      <p class="subline">${escapeHtml(asset.sublineAr)}</p>
-      <div class="labels">${labels}</div>
-    </section>
-    <div class="app-cta" dir="ltr">
-      <span class="url">${brandAssets.url}</span>
-      <img class="app-store-badge" alt="Download on the App Store" src="${escapeAttribute(appStoreBadgeSrc)}">
-      <span class="cta-copy" dir="rtl">${escapeHtml(asset.cta)}</span>
-    </div>
-  </main>
-</body>
-</html>`;
-}
-
-function buildAnchorSvg(anchor) {
-  if (anchor === "kuwait-towers") {
-    return `<svg viewBox="0 0 520 720" role="img" aria-label="">
-      <defs>
-        <clipPath id="familyRightLowerSphereClip">
-          <circle cx="338" cy="348" r="86" />
-        </clipPath>
-        <clipPath id="familyRightUpperSphereClip">
-          <circle cx="352" cy="154" r="58" />
-        </clipPath>
-        <clipPath id="familyLeftSphereClip">
-          <circle cx="152" cy="334" r="78" />
-        </clipPath>
-      </defs>
-      <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-        <g stroke-width="11">
-          <path class="tower-main-right" d="M300 680 C310 556 315 454 332 406 C342 377 345 320 342 280 C338 226 342 184 352 112" />
-          <path class="tower-main-right" d="M386 680 C374 556 369 454 352 406 C342 377 339 320 342 280 C346 226 356 184 364 112" opacity="0.82" />
-          <path class="tower-main-left" d="M112 680 C120 560 126 448 144 382 C154 346 158 304 154 260 C150 206 156 160 166 94" />
-          <path class="tower-main-left" d="M188 680 C180 560 174 448 158 382 C148 346 144 304 148 260 C152 206 160 160 172 94" opacity="0.82" />
-          <path class="tower-needle-center" d="M238 680 L248 230 L255 104" />
-          <path class="tower-needle-center" d="M256 680 L248 230 L242 138" opacity="0.62" />
-        </g>
-        <g stroke-width="7">
-          <path class="tower-spire" d="M352 112 L356 18" />
-          <path class="tower-spire" d="M364 112 L356 18" opacity="0.72" />
-          <path class="tower-spire" d="M166 94 L174 30" />
-          <path class="tower-spire" d="M172 94 L174 30" opacity="0.72" />
-          <path class="tower-spire" d="M248 230 L248 62" opacity="0.74" />
-        </g>
-        <g stroke-width="8">
-          <circle class="tower-right-lower-sphere" cx="338" cy="348" r="86" />
-          <circle class="tower-right-upper-sphere" cx="352" cy="154" r="58" />
-          <circle class="tower-left-sphere" cx="152" cy="334" r="78" />
-        </g>
-        <g class="tower-lattice" stroke-width="3" opacity="0.62">
-          <g clip-path="url(#familyRightLowerSphereClip)">
-            <path d="M240 308 C292 332 344 356 438 400" />
-            <path d="M240 340 C292 364 344 388 438 432" />
-            <path d="M250 388 C306 360 366 330 434 290" />
-            <path d="M250 426 C306 398 366 368 434 328" />
-            <path d="M282 266 C318 324 364 374 426 422" />
-            <path d="M250 424 C306 366 366 312 430 264" />
-          </g>
-          <g clip-path="url(#familyRightUpperSphereClip)">
-            <path d="M284 130 C326 150 370 170 420 196" />
-            <path d="M284 158 C326 178 370 198 420 224" />
-            <path d="M292 198 C330 168 372 138 412 110" />
-            <path d="M306 102 C328 138 362 174 408 204" />
-          </g>
-          <g clip-path="url(#familyLeftSphereClip)">
-            <path d="M62 302 C104 324 152 350 242 386" />
-            <path d="M66 334 C108 356 156 382 240 416" />
-            <path d="M74 390 C118 360 174 326 232 286" />
-            <path d="M82 422 C124 392 178 356 226 320" />
-            <path d="M100 260 C132 318 172 368 222 410" />
-          </g>
-        </g>
-        <g stroke-width="7">
-          <path class="tower-balcony-band" d="M260 330 C305 342 372 344 418 330" />
-          <path class="tower-balcony-band" d="M262 360 C310 372 374 372 416 360" opacity="0.78" />
-          <path class="tower-balcony-band" d="M296 176 C328 184 378 184 406 176" opacity="0.72" />
-        </g>
-        <path d="M52 680 H430" stroke-width="10" opacity="0.78" />
-      </g>
-    </svg>`;
-  }
-
-  if (anchor === "dhow-sail") {
-    return `<svg viewBox="0 0 760 760" role="img" aria-label="">
-      <g fill="none" stroke="currentColor" stroke-width="8">
-        <path d="M92 620 C214 684 486 686 680 602" />
-        <path d="M182 602 L420 78 L590 602" />
-        <path d="M420 78 C300 206 256 382 182 602" fill="rgba(17,72,255,0.26)" />
-        <path d="M420 78 C506 258 538 414 590 602" fill="rgba(255,255,255,0.1)" />
-        <path d="M134 620 C244 714 512 716 690 600" />
-      </g>
-    </svg>`;
-  }
-
-  if (anchor === "sadu-weave") {
-    return `<svg viewBox="0 0 720 740" role="img" aria-label="">
-      <rect width="720" height="740" fill="rgba(255,255,255,0.18)" />
-      <g fill="currentColor">
-        ${Array.from({ length: 8 }, (_, row) =>
-          Array.from({ length: 7 }, (_, col) => {
-            const x = 30 + col * 96;
-            const y = 44 + row * 82;
-            const opacity = (row + col) % 2 ? "0.22" : "0.54";
-            return `<path d="M${x} ${y + 34} L${x + 40} ${y} L${x + 80} ${y + 34} L${x + 40} ${y + 68} Z" opacity="${opacity}" />`;
-          }).join("")
-        ).join("")}
-      </g>
-      <g stroke="#1148FF" stroke-width="14" opacity="0.78">
-        <path d="M0 170 H720" />
-        <path d="M0 492 H720" />
-      </g>
-    </svg>`;
-  }
-
-  if (anchor === "market-arch") {
-    return `<svg viewBox="0 0 660 700" role="img" aria-label="">
-      <g fill="none" stroke="currentColor" stroke-width="9">
-        <path d="M80 650 V300 C80 152 196 54 330 54 C464 54 580 152 580 300 V650" />
-        <path d="M164 650 V318 C164 218 232 150 330 150 C428 150 496 218 496 318 V650" opacity="0.72" />
-        <path d="M72 650 H590" />
-        <path d="M112 504 H548" opacity="0.55" />
-      </g>
-      <g fill="#1148FF" opacity="0.72">
-        <rect x="100" y="590" width="66" height="28" />
-        <rect x="496" y="590" width="66" height="28" />
-      </g>
-    </svg>`;
-  }
-
-  return `<svg viewBox="0 0 560 560" role="img" aria-label="">
+    <div class="anchor anchor-source-seal" aria-hidden="true"><svg viewBox="0 0 560 560" role="img" aria-label="">
     <g fill="none" stroke="currentColor" stroke-width="9">
       <circle cx="280" cy="280" r="224" />
       <circle cx="280" cy="280" r="158" />
@@ -856,29 +601,20 @@ function buildAnchorSvg(anchor) {
       <circle cx="280" cy="280" r="18" fill="currentColor" stroke="none" opacity="0.82" />
       <circle cx="280" cy="280" r="54" opacity="0.38" />
     </g>
-  </svg>`;
-}
-
-function getFamilyCtaZone(asset) {
-  if (["launch-poster", "vertical-cover"].includes(asset.family)) {
-    return "full";
-  }
-
-  if (asset.palette === "dark" || asset.family === "phone-hero-banner") {
-    return "right";
-  }
-
-  return "left";
-}
-
-function escapeHtml(value) {
-  return String(value)
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;");
-}
-
-function escapeAttribute(value) {
-  return escapeHtml(value).replace(/'/g, "&#39;");
-}
+  </svg></div>
+    <div class="kinetic" aria-hidden="true"><i></i></div>
+    
+    <section class="content">
+      <span class="copy-plate" aria-hidden="true"></span>
+      <h1>راجع محفظتك بهدوء</h1>
+      <p class="subline">تابع المكونات والتوزيعات المتوقعة ضمن تجربة مرتبة.</p>
+      <div class="labels"><span>محفظة</span><span>مكونات</span><span>توزيعات</span><span>مراجعة</span></div>
+    </section>
+    <div class="app-cta" dir="ltr">
+      <span class="url">boursati.app</span>
+      <img class="app-store-badge" alt="Download on the App Store" src="file:///Users/home/Documents/Mamoon%20Notes/Projects/boursati-marketing/BOURSATI_FINAL_SYSTEM/assets/app-store-badge.svg">
+      <span class="cta-copy" dir="rtl">حمّل بورصتي من App Store</span>
+    </div>
+  </main>
+</body>
+</html>

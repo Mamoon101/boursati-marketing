@@ -128,3 +128,28 @@ test("refinement pass keeps text clear, CTA contextual, and phone shell iPhone-l
   assert.match(buildHtml(assets.find((asset) => asset.family === "daily-tip")), /data-family="daily-tip"/);
   assert.match(buildHtml(assets.find((asset) => asset.family === "market-summary-tip")), /data-family="market-summary-tip"/);
 });
+
+test("dark daily batch is dark-only, grid-safe, and paired for Instagram plus X", async () => {
+  const assets = await loadFamilyAssets(new URL("../content/dark-daily-batch-v1.json", import.meta.url));
+  const instagramAssets = assets.filter((asset) => asset.platform === "instagram-feed-profile-grid-safe");
+  const xAssets = assets.filter((asset) => asset.platform === "x");
+
+  assert.equal(assets.length, 28);
+  assert.equal(instagramAssets.length, 14);
+  assert.equal(xAssets.length, 14);
+
+  for (const asset of assets) {
+    assert.doesNotThrow(() => validateAsset(asset));
+    assert.equal(asset.palette, "dark");
+    assert.equal(asset.phoneScreen, null);
+    assert.match(buildHtml(asset), /data-visual="/);
+  }
+
+  for (const asset of instagramAssets) {
+    assert.equal(asset.aspect, "profile-grid");
+  }
+
+  for (const asset of xAssets) {
+    assert.equal(asset.aspect, "x-banner");
+  }
+});
