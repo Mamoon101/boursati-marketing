@@ -70,7 +70,7 @@ await buildContactSheet({
   channel: "instagram",
   columns: 4,
   thumbWidth: 216,
-  thumbHeight: 288,
+  thumbHeight: 216,
   objectFit: "cover",
   outputPath: resolve(outputRoot, "contact-sheet-instagram.png"),
 });
@@ -211,7 +211,7 @@ Dark-only production batch for two weeks of daily Boursati posting.
 
 ## Format
 
-- Instagram: \`1080x1440\`, profile-grid-safe. Primary message and CTA are kept inside the center crop.
+- Instagram: \`1080x1080\`, square. The profile grid and opened post use the same visible composition.
 - X: \`1600x900\`, landscape in-stream banner.
 - Palette: dark only.
 - Screenshots: none in this batch. This keeps the set art-led and avoids forced mockups.

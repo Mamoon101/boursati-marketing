@@ -131,7 +131,7 @@ test("refinement pass keeps text clear, CTA contextual, and phone shell iPhone-l
 
 test("dark daily batch is dark-only, grid-safe, and paired for Instagram plus X", async () => {
   const assets = await loadFamilyAssets(new URL("../content/dark-daily-batch-v1.json", import.meta.url));
-  const instagramAssets = assets.filter((asset) => asset.platform === "instagram-feed-profile-grid-safe");
+  const instagramAssets = assets.filter((asset) => asset.platform === "instagram-square");
   const xAssets = assets.filter((asset) => asset.platform === "x");
 
   assert.equal(assets.length, 28);
@@ -146,7 +146,7 @@ test("dark daily batch is dark-only, grid-safe, and paired for Instagram plus X"
   }
 
   for (const asset of instagramAssets) {
-    assert.equal(asset.aspect, "profile-grid");
+    assert.equal(asset.aspect, "square");
   }
 
   for (const asset of xAssets) {
